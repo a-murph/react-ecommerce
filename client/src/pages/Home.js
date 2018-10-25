@@ -1,6 +1,22 @@
 import React, {Component} from "react";
+import {withRouter} from "react-router-dom";
 
 class Home extends Component {
+	state = {
+		searchTerm: ""
+	};
+
+	handleSearchInput = event => {
+		this.setState({
+			searchTerm: event.target.value
+		}, () => {console.log(this.state.searchTerm)});
+	};
+
+	handleTextInputSearch = event => {
+		if (event.key === "Enter")
+			this.props.history.push(`/search?s=${this.state.searchTerm}`);
+	};
+
 	render() {
 		return (
 			<div className="container">
@@ -27,8 +43,8 @@ class Home extends Component {
 								<span className="nav-font-white">All</span>
 								<img className="img" src="img/arrow-down-white.svg" />
 						</div>
-						<input type="text" className="home-nav-search-text-input"></input>
-						<div className="home-nav-search-submit-button"><input type="submit" class="icon" value=""></input></div>
+						<input type="text" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={this.handleTextInputSearch}></input>
+						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => {this.props.history.push(`/search?s=${this.state.searchTerm}`)}}></input></div>
 					</div>
 					<div className="home-nav-language-dropdown">
 						<span className="nav-body-font">EN</span>
