@@ -35,7 +35,7 @@
         .home-nav-search-filter-button{
             width: 8%;
             height: 100%;
-            background-color: @secondary-color; 
+            background-color: @secondary-color;
             border-radius: 2px 0px 0px 2px;
             display: flex;
             align-items: center;
@@ -49,8 +49,10 @@
 
         .home-nav-search-text-input{
             width: 88%;
-            height: 100%;
-            background-color: @light-gray; 
+			height: 95%;
+			background-color: @light-gray;
+			border: none;
+			text-indent: 10px;
         }
 
         .home-nav-search-submit-button{
@@ -60,11 +62,21 @@
             border-radius: 0px 2px 2px 0px;
             display: flex;
             align-items: center;
-            justify-content: center;
+			justify-content: center;
+			cursor: pointer;
 
             .icon{
-                width: 60%;
-            }
+				width: 60%;
+				border: none;
+				background-color: rgba(0, 0, 0, 0);
+				background-image: url("../img/search-icon.svg");
+				background-size: 100% 100%;
+				cursor: pointer;
+			}
+
+			.icon:focus{
+				outline: none;
+			}
         }
     }
 
@@ -163,14 +175,14 @@
         .nav-search-filter-button{
             width: 6%;
             height: 100%;
-            background-color: rgba(0,0,0,0.25); 
+            background-color: rgba(0,0,0,0.25);
             border-radius: 2px 0px 0px 2px;
         }
 
         .nav-search-text-input{
             width: 88%;
             height: 100%;
-            background-color: rgba(0,0,0,0.05); 
+            background-color: rgba(0,0,0,0.05);
         }
 
         .nav-search-submit-button{
@@ -202,13 +214,13 @@
     .nav-orders-dropdown{
         width: 6%;
         height: 35px;
-        background-color: gray; 
+        background-color: gray;
     }
 
     .nav-cart-button{
         width: 6%;
         height: 35px;
-        background-color: gray; 
+        background-color: gray;
     }
 
 }

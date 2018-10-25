@@ -27,8 +27,8 @@ class Home extends Component {
 								<span className="nav-font-white">All</span>
 								<img className="img" src="img/arrow-down-white.svg" />
 						</div>
-						<div className="home-nav-search-text-input"></div>
-						<div className="home-nav-search-submit-button"><img className="icon" src="img/search-icon.svg" /></div>
+						<input type="text" className="home-nav-search-text-input"></input>
+						<div className="home-nav-search-submit-button"><input type="submit" class="icon" value=""></input></div>
 					</div>
 					<div className="home-nav-language-dropdown">
 						<span className="nav-body-font">EN</span>

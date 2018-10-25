@@ -233,8 +233,10 @@ table {
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-text-input {
   width: 88%;
-  height: 100%;
+  height: 95%;
   background-color: #f3f3f3;
+  border: none;
+  text-indent: 10px;
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-submit-button {
   width: 6%;
@@ -244,9 +246,18 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-submit-button .icon {
   width: 60%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../img/search-icon.svg");
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.home-menu-bar .home-nav-search-bar .home-nav-search-submit-button .icon:focus {
+  outline: none;
 }
 .home-menu-bar .home-nav-language-dropdown {
   width: 3%;
