@@ -94,64 +94,64 @@ class Search extends Component {
 
 					<div className="search-results-display">
 
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
 								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
 							</div>
 						</a>
-						<a className="search-result-card" href="#">
-							<img className="search-result-card-img" src="#"/>
+						<a className="search-result-card" href="##">
+							<img alt="" className="search-result-card-img" src="#"/>
 							<div className="search-result-card-text">
 								<span>The Name of the Product</span>
 								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
