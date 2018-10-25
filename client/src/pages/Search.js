@@ -1,6 +1,19 @@
 import React, {Component} from "react";
 
 class Search extends Component {
+	state = {
+		searchTerm: ""
+	};
+
+	componentDidMount() {
+		let urlParams = new URLSearchParams(window.location.search);
+		let s = urlParams.get('s');
+
+		this.setState({
+			searchTerm: s
+		});
+	};
+
 	render() {
 		return (
 			<div>
