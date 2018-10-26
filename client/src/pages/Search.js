@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import API from "../utils/API"
+import SearchResult from "../components/SearchResult";
 
 class Search extends Component {
 	state = {
@@ -42,7 +43,7 @@ class Search extends Component {
 
 				<div className="refine-results-bar">
 					<div className="refine-results-count">
-						<span>1-8</span><span> of over </span><span>60,000</span><span> results for </span><span>Clothing, Shoes & Jewelry: </span><span>"t-shirt"</span>
+						<span>1 - {this.state.results.length}</span><span> of </span><span>{this.state.results.length}</span><span> results in </span><span>All Categories: </span><span>"{this.state.searchTerm}"</span>
 					</div>
 					<div className="refine-results-sort-by-section">
 						<span>Sort by</span>
@@ -81,10 +82,10 @@ class Search extends Component {
 							<span>Brand Name</span>
 							<form>
 								<input type="radio" name="brand-name" value="Show-All" defaultChecked/> Show All<br/>
-								<input type="radio" name="brand-name" value="ABCD"/> ABCD<br/>
-								<input type="radio" name="brand-name" value="EFG"/> EFG<br/>
-								<input type="radio" name="brand-name" value="HIJK"/> HIJK<br/>
-								<input type="radio" name="brand-name" value="LMNOP"/> LMNOP<br/>
+								<input type="radio" name="brand-name" value="A"/> A - G<br/>
+								<input type="radio" name="brand-name" value="H"/> H - M<br/>
+								<input type="radio" name="brand-name" value="N"/> N - S<br/>
+								<input type="radio" name="brand-name" value="T"/> T - Z<br/>
 							</form>
 						</div>
 
@@ -101,72 +102,11 @@ class Search extends Component {
 					</div>
 
 					<div className="search-results-display">
-
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-						<a className="search-result-card" href="##">
-							<img alt="" className="search-result-card-img" src="#"/>
-							<div className="search-result-card-text">
-								<span>The Name of the Product</span>
-								<div><span>$12.99</span> <span>(insert img) free shipping tag</span></div>
-								<div><span>(insert img) Customer Rating Stars</span><span>238</span></div>
-							</div>
-						</a>
-
+						{
+							this.state.results.map((product, index) => {
+								return <SearchResult key={index} product={product} />
+							})
+						}
 					</div>
 				</main>
 			</div>
