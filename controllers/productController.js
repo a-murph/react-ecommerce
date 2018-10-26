@@ -6,7 +6,7 @@ module.exports = {
 		s = req.query.s;
 
 		db.Product
-			.find({name: `/${s}/i`})
+			.find({ "name": { "$regex": s, "$options": "i" } })
 			.then(dbModel => res.json(dbModel))
 			.catch(err => res.status(422).json(err));
 	}
