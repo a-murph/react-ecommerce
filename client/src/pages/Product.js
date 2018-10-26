@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import API from "../utils/API";
 import UserReview from "../components/UserReview";
 
 class Product extends Component {
@@ -8,11 +7,8 @@ class Product extends Component {
 	};
 
 	componentDidMount() {
-		const id = window.location.href.split("/").pop();
-		API.searchOne(id).then(res => {
-			this.setState({
-				product: res.data
-			});
+		this.setState({
+			product: this.props.location.state.product
 		});
 	};
 
