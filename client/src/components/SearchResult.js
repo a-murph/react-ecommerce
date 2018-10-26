@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchResult = props => (
 	<a className="search-result-card" href={`/product/${props.product._id}`}>
-		<img alt="" className="search-result-card-img" src={props.product.img}/>
+		<img alt="" className="search-result-card-img" src={props.product.image}/>
 		<div className="search-result-card-text">
 			<span>{props.product.name}</span>
 			<div><span>${props.product.price.toFixed(2)}</span> <span>(insert img) free shipping tag</span></div>
