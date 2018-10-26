@@ -1,8 +1,10 @@
 import React, {Component} from "react";
+import API from "../utils/API"
 
 class Search extends Component {
 	state = {
-		searchTerm: ""
+		searchTerm: "",
+		results: []
 	};
 
 	componentDidMount() {
@@ -11,6 +13,12 @@ class Search extends Component {
 
 		this.setState({
 			searchTerm: s
+		}, () => {
+			API.search(this.state.searchTerm).then(res => {
+				this.setState({
+					results: res.data
+				}, () => {console.log(this.state.results)});
+			});
 		});
 	};
 

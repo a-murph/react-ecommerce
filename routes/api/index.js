@@ -3,9 +3,7 @@ const productController = require("../../controllers/productController");
 
 // router.use("/list", listRoutes);
 
-// router.route("/trailers/:title/:year")
-// 	.get(moviesController.trailers);
-
-// router.route("/friend/:user")
+router.route("/search")
+	.get(productController.search);
 
 module.exports = router;
