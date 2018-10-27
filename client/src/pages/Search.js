@@ -60,9 +60,30 @@ class Search extends Component {
 				break;
 
 			case "brand-name":
+				let brandMin = event.target.dataset.min;
+				let brandMax = event.target.dataset.max;
+
+				let brandFiltered = this.state.results.filter(product => {
+					return product.brand[0] >= brandMin && product.brand[0] <= brandMax;
+				});
+
+				this.setState({
+					filteredResults: brandFiltered
+				});
+
 				break;
 
 			case "customer-rating":
+				let ratingMin = event.target.value;
+
+				let ratingFiltered = this.state.results.filter(product => {
+					return product.rating >= ratingMin;
+				});
+
+				this.setState({
+					filteredResults: ratingFiltered
+				});
+
 				break;
 
 			default:
@@ -134,21 +155,22 @@ class Search extends Component {
 						<div className="refine-results-side-bar-section">
 							<span>Brand Name</span>
 							<form>
-								<input type="radio" name="brand-name" value="Show-All" defaultChecked/> Show All<br/>
-								<input type="radio" name="brand-name" value="A-G"/> A - G<br/>
-								<input type="radio" name="brand-name" value="H-M"/> H - M<br/>
-								<input type="radio" name="brand-name" value="N-S"/> N - S<br/>
-								<input type="radio" name="brand-name" value="T-Z"/> T - Z<br/>
+								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="A" data-max="Z" defaultChecked/> Show All<br/>
+								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="A" data-max="G"/> A - G<br/>
+								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="H" data-max="M"/> H - M<br/>
+								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="N" data-max="S"/> N - S<br/>
+								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="T" data-max="Z"/> T - Z<br/>
 							</form>
 						</div>
 
 						<div className="refine-results-side-bar-section">
 							<span>Customer Rating</span>
 							<form>
-								<input type="checkbox" name="customer-rating" value="4"/> <span>(insert img) 4 Stars</span> <span>& Up</span><br/>
-								<input type="checkbox" name="customer-rating" value="3"/> <span>(insert img) 3 Stars</span> <span>& Up</span><br/>
-								<input type="checkbox" name="customer-rating" value="2"/> <span>(insert img) 2 Stars</span> <span>& Up</span><br/>
-								<input type="checkbox" name="customer-rating" value="1"/> <span>(insert img) 1 Star</span> <span>& Up</span>
+								<input onChange={this.handleFilter} type="radio" defaultChecked name="customer-rating" value={0}/> Show All<br/>
+								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={4}/> <span>4 Stars</span> <span>& Up</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={3}/> <span>3 Stars</span> <span>& Up</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={2}/> <span>2 Stars</span> <span>& Up</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={1}/> <span>1 Star</span> <span>& Up</span>
 							</form>
 						</div>
 
