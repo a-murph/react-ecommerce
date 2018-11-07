@@ -37,19 +37,19 @@ class Home extends Component {
 					</div>
 					<div className="home-nav-search-bar">
 						<div className="home-nav-search-filter-button">
-							<span className="nav-font-dark">All <i className="fas fa-sort-down nav-font-dark"></i></span>
+							<span className="nav-font-dark">All <i className="fas fa-sort-down"></i></span>
 						</div>
 						<input type="text" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={this.handleTextInputSearch}></input>
 						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}></input></div>
 					</div>
 					<div className="home-nav-account-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-title-font"></i></div>
+						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down"></i></div>
 					</div>
 					<div className="home-nav-orders-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down nav-title-font"></i></div>
+						<div className="bottom-container"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down"></i></div>
 					</div>
 					<div className="home-nav-cart-button">
-						<i className="fas fa-shopping-cart cart-icon"></i>
+						<i className="fas fa-shopping-cart"></i>
 						<span className="nav-title-font">Cart</span>
 						<span className="cart-font">0</span>
 					</div>
