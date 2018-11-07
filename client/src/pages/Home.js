@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class Home extends Component {
 	state = {
@@ -21,179 +21,171 @@ class Home extends Component {
 			<div className="container">
 				<div className="top-bar">
 					<div className="announcement-container">
-						<span className="title-font">FREE 3-day shippping and FREE returns | Amazon Prime Eligible</span>
+						<span className="banner-font">FREE 3-day shippping and FREE returns | <i className="fab fa-amazon"></i> Amazon Prime Eligible</span>
 					</div>
 				</div>
 
 				<div className="logo-container">
-					<h1 className="logo-font">West Indigo</h1>
+					<img alt="" className="img" src="img/logo2.svg" />
 				</div>
 
 				<nav className="home-menu-bar">
 					<div className="home-nav-location-button">
-						<img alt="" className="icon" src="img/location-icon.svg" />
 						<div className="text-container">
-							<span className="nav-body-font">Deliver to Name</span>
-							<span className="nav-title-font">Fanwood 07023</span>
+							<span className="nav-title-font">Welcome, User!</span>
 						</div>
 					</div>
 					<div className="home-nav-search-bar">
 						<div className="home-nav-search-filter-button">
-								<span className="nav-font-white">All</span>
-								<img alt="" className="img" src="img/arrow-down-white.svg" />
+							<span className="nav-font-dark">All <i className="fas fa-sort-down nav-font-dark"></i></span>
 						</div>
 						<input type="text" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={this.handleTextInputSearch}></input>
-						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => {this.props.history.push(`/search?s=${this.state.searchTerm}`)}}></input></div>
+						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}><i className="fas fa-search nav-font-dark"></i></input></div>
 					</div>
-					<div className="home-nav-language-dropdown">
-						<span className="nav-body-font">EN</span>
-						<img alt="" className="img" src="img/arrow-down.svg" />
-					</div>
-					<div className="home-nav-div-bar"></div>
 					<div className="home-nav-account-dropdown">
-						<span className="nav-body-font">Hello, Name</span>
-						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><img alt="" className="img" src="img/arrow-down.svg" /></div>
+						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-title-font"></i></div>
 					</div>
 					<div className="home-nav-orders-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Orders</span><img alt="" className="img" src="img/arrow-down.svg" /></div>
+						<div className="bottom-container"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down nav-title-font"></i></div>
 					</div>
 					<div className="home-nav-cart-button">
-						<img alt="" className="img" src="img/cart.svg" />
+						<i className="fas fa-shopping-cart cart-icon"></i>
 						<span className="nav-title-font">Cart</span>
 						<span className="cart-font">0</span>
 					</div>
 				</nav>
 
 				<div className="jumbotron-carousel">
-					<img alt="" className="img" src="img/carousel-stock1.jpg" />
+					<img alt="" className="img" src="img/index/carousel-stock1.jpg" />
 					<a className="plaque-container" href="##">
 						<div className="plaque">
 							<span className="plaque-title-font">5 NAMES TO KNOW</span>
 							<div className="featured-seller-card-divider"></div>
 							<span className="plaque-body-font">Get familiar with these new-to-us labels</span>
 							<span className="plaque-link-font">See the Feature</span>
-					</div>
+						</div>
 					</a>
 				</div>
 
 				<div className="featured-under-jumbotron">
 					<a className="featured-under-jumbotron-item-anchor" href="##"><div className="featured-under-jumbotron-item">
-						<img alt="" className="featured-under-jumbotron-item-img" src="#" />
+						<img alt="" className="featured-under-jumbotron-item-img" src="img/index/1.jpg" />
 						<div className="featured-under-jumbotron-item-text">
-							<span>DIESEL'S DEBUT</span>
-							<p>The iconic Italian streetwear label comes to East Dane.</p>
-							<span>Shop Now</span>
+							<span className="underjumbo-title-font">ABITI'S DEBUT</span>
+							<p className="underjumbo-body-font">The iconic Italian streetwear label comes to West Indigo.</p>
+							<span className="underjumbo-link-font">Shop Now</span>
 						</div>
 					</div></a>
 
 					<a className="featured-under-jumbotron-item-anchor" href="##"><div className="featured-under-jumbotron-item">
-						<img alt="" className="featured-under-jumbotron-item-img" src="#" />
+						<img alt="" className="featured-under-jumbotron-item-img" src="img/index/3.jpg" />
 						<div className="featured-under-jumbotron-item-text">
-							<span>NEW SEASON, NEW KICKS</span>
-							<p>Tons of fresh fall sneakers have landed.</p>
-							<span>Shop Now</span>
+							<span className="underjumbo-title-font">URBAN JUNGLE</span>
+							<p className="underjumbo-body-font">Green is in for home decor every season.</p>
+							<span className="underjumbo-link-font">Shop Now</span>
 						</div>
 					</div> </a>
 				</div>
 
-			<div className="more-to-discover">
-				<span>MORE TO DISCOVER</span>
-				<div className="more-to-discover-item-container">
-					<a className="more-to-discover-item" href="##">
-						<img alt="" className="more-to-discover-item-img" src="#" />
-						<span>TOP SELLERS</span>
-					</a>
-					<a className="more-to-discover-item" href="##">
-						<img alt="" className="more-to-discover-item-img" src="#" />
-						<span>THE BASICS</span>
+				<div className="more-to-discover">
+					<span className="discover-title-font">SEE OUR LATEST DEALS IN</span>
+					<div className="more-to-discover-item-container">
+						<a className="more-to-discover-item" href="##">
+							<img alt="" className="more-to-discover-item-img" src="img/index/e.jpg" />
+							<span className="more-to-discover-text discover-font">ELECTRONICS</span>
 						</a>
 						<a className="more-to-discover-item" href="##">
-							<img alt="" className="more-to-discover-item-img" src="#" />
-							<span>WEAR TO WORK</span>
+							<img alt="" className="more-to-discover-item-img" src="img/index/b.png" />
+							<span className="more-to-discover-text discover-font">HOME DECOR</span>
 						</a>
 						<a className="more-to-discover-item" href="##">
-							<img alt="" className="more-to-discover-item-img" src="#" />
-							<span>EDITORS' PICKS</span>
+							<img alt="" className="more-to-discover-item-img" src="img/index/c.png" />
+							<span className="more-to-discover-text discover-font">FASHION</span>
 						</a>
 						<a className="more-to-discover-item" href="##">
-							<img alt="" className="more-to-discover-item-img" src="#" />
-							<span>ACTIVEWEAR</span>
+							<img alt="" className="more-to-discover-item-img" src="img/index/a.jpg" />
+							<span className="more-to-discover-text discover-font">BEAUTY</span>
 						</a>
-				</div>
-			</div>
-
-			<div className="featured-sellers-card-section">
-				<a className="featured-seller-card" href="##">
-					<img alt="" className="featured-seller-card-img" src="#" />
-					<div className="featured-seller-card-plaque">
-							<span>5 NAMES TO KNOW</span>
-							<div className="featured-seller-card-divider"></div>
-							<span>Get familiar with these new-to-us labels</span>
-							<span>See the Feature</span>
+						<a className="more-to-discover-item" href="##">
+							<img alt="" className="more-to-discover-item-img" src="img/index/d.jpg" />
+							<span className="more-to-discover-text discover-font">BOOKS</span>
+						</a>
 					</div>
+				</div>
+
+				<div className="featured-sellers-card-section">
+					<a className="featured-seller-card" href="##">
+						<img alt="" className="featured-seller-card-img" src="img/index/2.jpg" />
+						<div className="featured-seller-card-plaque">
+							<span className="plaque-title-font">NEW SEASON, NEW KICKS</span>
+							<div className="featured-seller-card-divider"></div>
+							<span className="plaque-body-font">Tons of fresh sneakers have landed.</span>
+							<span className="plaque-link-font">See the Feature</span>
+						</div>
 					</a>
 					<a className="featured-seller-card" href="##">
-						<img alt="" className="featured-seller-card-img" src="#" />
+						<img alt="" className="featured-seller-card-img" src="img/index/4.jpg" />
 						<div className="featured-seller-card-plaque">
-								<span>EAST DANE and GEAR PATROL</span>
-								<span>present:</span>
-								<span>DENIM THREE WAYS</span>
-								<div className="featured-seller-card-divider"></div>
-								<span>Get the most out of this wardrobe staple</span>
-								<span>See the Feature</span>
+							<span className="plaque-title-font">WEST INDIGO and JANE DOE</span>
+							<span className="plaque-body-font">present:</span>
+							<span className="plaque-title-font">CARTAS MAGICAS</span>
+							<div className="featured-seller-card-divider"></div>
+							<span className="plaque-body-font">Get the latest edition of the popular series</span>
+							<span className="plaque-link-font">See the Feature</span>
 						</div>
 					</a>
-			</div>
+				</div>
 
-			<div className="rewards-and-email-signup-section">
-				<a className="signup-section-button" href="##">
-					<span>ALL YOURS EAST DANE REWARDS</span>
-					<span>SIGN UP AND START RECIEVING PERKS</span>
-				</a>
-				<a className="signup-section-button" href="##">
-					<span><img alt="" src="#" />INSIDER INTEL: SIGN UP FOR EMAILS</span>
-				</a>
-			</div>
+				<div className="rewards-and-email-signup-section">
+					<a className="signup-section-button" href="##">
+						<span className="signup-title-font">ALL YOUR WEST INDIGO REWARDS</span> <br />
+						<span className="signup-body-font">SIGN UP AND START RECIEVING PERKS</span>
+					</a>
+					<a className="signup-section-button" href="##">
+						<span className="signup-body-font"> <i className="far fa-envelope signup-body-font"></i> INSIDER INTEL: SIGN UP FOR EMAILS</span>
+					</a>
+				</div>
 
-			<footer className="footer">
-				<div className="footer-info-container">
+				<footer className="footer">
+					<div className="footer-info-container">
 						<div className="footer-info">
-						<h4>Services</h4>
-								<a href="##">Customer Service</a>
-								<a href="##">Gift Certificates</a>
+							<h4 className="footer-title-font">Services</h4>
+							<a className="footer-body-font" href="##">Customer Service</a>
+							<a className="footer-body-font" href="##">Gift Certificates</a>
 						</div>
 						<div className="footer-info">
-							<h4>Information</h4>
-								<a href="##">About Us</a>
-								<a href="##">Careers</a>
-								<a href="##">Affiliate Program</a>
+							<h4 className="footer-title-font">Information</h4>
+							<a className="footer-body-font" href="##">About Us</a>
+							<a className="footer-body-font" href="##">Careers</a>
+							<a className="footer-body-font" href="##">Affiliate Program</a>
 						</div>
 						<div className="footer-info">
-							<h4>Personalize</h4>
-								<a href="##">My Account</a>
-								<a href="##">My Loyalty</a>
-								<a href="##">My Likes</a>
-								<a href="##">My Want List</a>
-								<a href="##">My Designers</a>
-								<a href="##">My Reviews</a>
+							<h4 className="footer-title-font">Personalize</h4>
+							<a className="footer-body-font" href="##">My Account</a>
+							<a className="footer-body-font" href="##">My Loyalty</a>
+							<a className="footer-body-font" href="##">My Likes</a>
+							<a className="footer-body-font" href="##">My Want List</a>
+							<a className="footer-body-font" href="##">My Designers</a>
+							<a className="footer-body-font" href="##">My Reviews</a>
 						</div>
 						<div className="footer-info">
-							<h4>Connect</h4>
-								<a href="##"><img alt="" src="#" />Instagram</a>
-								<a href="##"><img alt="" src="#" />Facebook</a>
-								<a href="##"><img alt="" src="#" />Twitter</a>
-								<a href="##"><img alt="" src="#" />Pinterest</a>
-								<a href="##"><img alt="" src="#" />Email List</a>
+							<h4 className="footer-title-font">Connect</h4>
+							<a className="footer-body-font" href="##"><i className="fab fa-instagram"></i> Instagram</a>
+							<a className="footer-body-font" href="##"><i className="fab fa-facebook-f"></i> Facebook</a>
+							<a className="footer-body-font" href="##"><i className="fab fa-twitter"></i> Twitter</a>
+							<a className="footer-body-font" href="##"><i className="fab fa-pinterest"></i> Pinterest</a>
+							<a className="footer-body-font" href="##"><i className="far fa-envelope"></i> Email List</a>
 						</div>
 						<div className="footer-info">
-							<h4>Connect</h4>
-								<a href="##"><img alt="" src="#" />United States(change)</a>
-								<a href="##"><img alt="" src="#" />Shipping and Returns</a>
-								<a href="##"><img alt="" src="#" />Amazon Prime Eligible</a>
+							<h4 className="footer-title-font">Connect</h4>
+							<a className="footer-body-font" href="##"><i className="fas fa-globe"></i> United States(change)</a>
+							<a className="footer-body-font" href="##"><i className="fas fa-shipping-fast"></i> Shipping and Returns</a>
+							<a className="footer-body-font" href="##"><i className="fab fa-amazon"></i> Amazon Prime Eligible</a>
 						</div>
 					</div>
-					<div><span>© 1999-2018 BOP LLC. All Rights Reserved.</span> <a href="##">Privacy Notice</a> <a href="##">Terms of Use</a></div>
+					<div><span className="footer-body-font">© Andrew J. Murphy All Rights Reserved.</span> <a class="footer-title-font" href="##">Privacy Notice</a> <a class="footer-title-font" href="##">Terms of Use</a></div>
 				</footer>
+
 			</div>
 		);
 	}
