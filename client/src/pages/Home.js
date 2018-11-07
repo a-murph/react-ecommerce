@@ -40,7 +40,7 @@ class Home extends Component {
 							<span className="nav-font-dark">All <i className="fas fa-sort-down nav-font-dark"></i></span>
 						</div>
 						<input type="text" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={this.handleTextInputSearch}></input>
-						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}><i className="fas fa-search nav-font-dark"></i></input></div>
+						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}></input></div>
 					</div>
 					<div className="home-nav-account-dropdown">
 						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-title-font"></i></div>
@@ -183,7 +183,7 @@ class Home extends Component {
 							<a className="footer-body-font" href="##"><i className="fab fa-amazon"></i> Amazon Prime Eligible</a>
 						</div>
 					</div>
-					<div><span className="footer-body-font">© Andrew J. Murphy All Rights Reserved.</span> <a class="footer-title-font" href="##">Privacy Notice</a> <a class="footer-title-font" href="##">Terms of Use</a></div>
+					<div><span className="footer-body-font">© Andrew J. Murphy All Rights Reserved.</span> <a className="footer-title-font" href="##">Privacy Notice</a> <a className="footer-title-font" href="##">Terms of Use</a></div>
 				</footer>
 
 			</div>
