@@ -3,7 +3,7 @@
 .home-menu-bar{
     width: 75%;
     height: 50px;
-    background-color: @main-color;
+    background-color: @secondary-color;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -18,6 +18,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
 
         .icon{
@@ -35,48 +36,27 @@
         .home-nav-search-filter-button{
             width: 8%;
             height: 100%;
-            background-color: @secondary-color;
+            background-color: @main-color; 
             border-radius: 2px 0px 0px 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            .img{
-                width: 12px;
-                margin-left: 10%;
-            }
         }
 
         .home-nav-search-text-input{
             width: 88%;
-			height: 95%;
-			background-color: @light-gray;
-			border: none;
-			text-indent: 10px;
+            height: 100%;
+            background-color: @tertiary-color; 
         }
 
         .home-nav-search-submit-button{
             width: 6%;
             height: 100%;
-            background-color: @secondary-color;
+            background-color: @main-color;
             border-radius: 0px 2px 2px 0px;
             display: flex;
             align-items: center;
-			justify-content: center;
-			cursor: pointer;
-
-            .icon{
-				width: 60%;
-				border: none;
-				background-color: rgba(0, 0, 0, 0);
-				background-image: url("../img/search-icon.svg");
-				background-size: 100% 100%;
-				cursor: pointer;
-			}
-
-			.icon:focus{
-				outline: none;
-			}
+            justify-content: center;
         }
     }
 
@@ -86,10 +66,6 @@
         display: flex;
         align-items: center;
 
-        .img{
-            width: 12px;
-            margin-left: 20%;
-        }
     }
 
     .home-nav-div-bar{
@@ -103,14 +79,11 @@
         height: 30px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         .bottom-container{
             display: flex;
             justify-content: space-between;
-
-            .img{
-                width: 12px;
-            }
         }
     }
 
@@ -119,25 +92,20 @@
         height: 30px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
 
         .bottom-container{
             display: flex;
             justify-content: space-between;
-
-            .img{
-                width: 12px;
-            }
         }
     }
 
     .home-nav-cart-button{
         width: 6%;
         height: 30px;
-
-        .img{
-            width: 50%;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
 }
@@ -175,14 +143,14 @@
         .nav-search-filter-button{
             width: 6%;
             height: 100%;
-            background-color: rgba(0,0,0,0.25);
+            background-color: rgba(0,0,0,0.25); 
             border-radius: 2px 0px 0px 2px;
         }
 
         .nav-search-text-input{
             width: 88%;
             height: 100%;
-            background-color: rgba(0,0,0,0.05);
+            background-color: rgba(0,0,0,0.05); 
         }
 
         .nav-search-submit-button{
@@ -214,13 +182,13 @@
     .nav-orders-dropdown{
         width: 6%;
         height: 35px;
-        background-color: gray;
+        background-color: gray; 
     }
 
     .nav-cart-button{
         width: 6%;
         height: 35px;
-        background-color: gray;
+        background-color: gray; 
     }
 
 }
