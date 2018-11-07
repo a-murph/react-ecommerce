@@ -306,7 +306,6 @@ table {
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-text-input {
   width: 88%;
-  height: 100%;
   background-color: white;
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-submit-button {
@@ -317,6 +316,10 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.home-menu-bar .home-nav-search-bar .home-nav-search-submit-button input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 .home-menu-bar .home-nav-language-dropdown {
   width: 3%;
