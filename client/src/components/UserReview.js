@@ -2,13 +2,22 @@ import React from "react";
 
 const UserReview = props => (
 	<div className="review">
-		<div className="review-item"><img alt="" src="#"/><span>{props.review.user}</span></div>
-		<div className="review-item"><img alt="" src="#"/><span>{props.review.rating} out of 5 Stars </span><span>Review Title</span></div>
-		<span className="review-item">{props.review.date}</span>
-		<div className="review-item"><span>Size: Medium </span><span>Color: White </span><span>Verified Purchase</span></div>
-		<div className="review-item"><pre>{props.review.text}</pre></div>
-		<span className="review-item">7 people found this helpful</span>
-		<div className="review-item review-buttons"> <a href="##"><img alt="" src="#"/><span>Helpful</span></a> <a href="##"><span>Comment</span></a> <a href="##"><span>Report Abuse</span></a></div>
+		<div className="review-header">
+			<div className="review-item"><span className="review-title-font">Review Title</span> <span className="review-body-font">{props.review.rating} out of 5 Stars </span> <i class="fas fa-check-circle"></i></div>
+			<div className="review-item"><span className="review-italics-font">On {props.review.date}</span> <span className="review-italics-font">by {props.review.user}</span></div>
+			<div className="review-item"><span className="review-italics-font">Size: Medium </span><span className="review-italics-font">Color: White </span></div>
+		</div>
+		<div className="review-body">
+			<div className="review-item"><p className="review-body-font">{props.review.text}</p></div>
+		</div>
+		<div className="review-footer">
+			<span className="review-item review-italics-font">7 people found this helpful</span>
+			<div className="review-item review-buttons"> 
+				<div><a href="##" className="product-body-font"><i class="far fa-thumbs-up"></i><span> Helpful</span></a></div>
+				<div><a href="##" className="product-body-font"><i class="far fa-comment"></i><span> Comment</span></a></div>
+				<div><a href="##" className="product-body-font"><i class="far fa-flag"></i><span> Report Abuse</span></a></div>
+			</div>
+		</div>
 	</div>
 );
 

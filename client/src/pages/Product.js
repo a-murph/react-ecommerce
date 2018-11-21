@@ -17,7 +17,7 @@ class Product extends Component {
 			<div>
 				<nav className="menu-bar">
 					<div className="nav-location-button"></div>
-					<div className="nav-home-logo"></div>
+					<div className="nav-home-logo"><img alt="" className="logo-nav" src="/img/logo3.svg"/></div>
 					<div className="nav-search-bar">
 						<div className="nav-search-filter-button"></div>
 						<div className="nav-search-text-input"></div>
@@ -32,11 +32,11 @@ class Product extends Component {
 
 				<main>
 					<div className="product-page-top-bar">
-						<div className="top-bar-search-result"><span>{this.state.product.category}</span></div>
+						<div className="top-bar-search-result product-body-font"><span>{this.state.product.category}</span></div>
 						<div className="top-bar-social-media-share">
-							<a className="social-media-share-link" href="##"><img alt="" className="social-media-share-img" src="#"/></a>
-							<a className="social-media-share-link" href="##"><img alt="" className="social-media-share-img" src="#"/></a>
-							<a className="social-media-share-link" href="##"><img alt="" className="social-media-share-img" src="#"/></a>
+							<a className="social-media-share-link" href="##"><i class="fab fa-facebook-f icon"></i></a>
+							<a className="social-media-share-link" href="##"><i class="fab fa-pinterest-p icon"></i></a>
+							<a className="social-media-share-link" href="##"><i class="fab fa-twitter icon"></i></a>
 						</div>
 					</div>
 
@@ -46,107 +46,107 @@ class Product extends Component {
 						</div>
 						<div className="product-main-info">
 							<div className="main-info-title">
-								<span>{this.state.product.name}</span>
-								<a href="##"><span>{this.state.product.brand}</span></a>
+								<span className="product-title-font">{this.state.product.name}</span>
+								<a href="##"><span className="product-bold-font">{this.state.product.brand}</span></a>
 								<div>
 									<img alt="" src="#"/>
-									<a href="##"><span>{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span></a>
+									<a href="##"><span className="product-body-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span></a>
 								</div>
 							</div>
 
 							<div className="main-info-price">
-									<div><span>List Price:</span> <span>${this.state.product.price}</span></div>
-									<div><span>Price:</span> <span>${this.state.product.price}</span> <span>& FREE Shipping</span></div>
-									<div><span>You Save:</span> <span>$0.00 (0%)</span></div>
+									<div><span className="product-body-font">List Price:</span> <span className="product-body-font">${this.state.product.price}</span></div>
+									<div><span className="product-body-font">Price:</span> <span className="product-body-font">${this.state.product.price}</span> <span className="product-bold-font">& FREE Shipping</span></div>
+									<div><span className="product-body-font">You Save:</span> <span className="product-body-font">$0.00 (0%)</span></div>
 							</div>
 
 
 							<div className="main-info-sizing-color">
-									<div><span>Size:</span> <span>Small</span></div>
-									<div><span>Color:</span> <span>Black</span></div>
+									<div><span className="product-body-font">Size:</span> <span className="product-body-font">Small</span></div>
+									<div><span className="product-body-font">Color:</span> <span className="product-body-font">Black</span></div>
 							</div>
 
 
 							<div className="main-info-quantity-add-to-card">
-									<div><span>Quantity:</span> <input type="number"/></div>
-									<button type="button">Add to Cart</button>
+									<div><span className="product-body-font">Quantity:</span> <input type="number"/></div>
+									<button className="product-body-font add-to-cart-button" type="button">Add to Cart</button>
 							</div>
 
 							<div className="main-info-add-to-list">
-									<a href="##"><img alt="" src="#"/><span>Add to List</span></a>
-									<a href="##"><img alt="" src="#"/><span>Add to Registry</span></a>
+									<a href="##"><img alt="" src="#"/><span className="product-bold-font">Add to List</span></a>
+									<a href="##"><img alt="" src="#"/><span className="product-bold-font add-to-registry">Add to Registry</span></a>
 							</div>
 						</div>
 					</div>
 
 					<div className="product-description">
 						<div className="product-description-text">
-							<span>About This Item</span>
-							{this.state.product.description}
+							<span className="product-title-font">About This Item</span>
+							<span className="product-body-font">{this.state.product.description}</span>
 						</div>
 						<img alt="" src="#" className="product-description-img"/>
 					</div>
 
 					<div className="recommended-products">
-						<span>Customers Also Bought These Products</span>
+						<span className="product-title-font title">Customers Also Bought These Products</span>
 						<div className="recommended-products-card-section">
 							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="#"/>
+								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
 								<div className="card-text">
-									<span>Men's Platinum EverSoft Muscle</span>
-									<span>Fruit of the Loom</span>
-									<div><img alt="" className="" src="#"/><span>288</span></div>
-									<span>$6.47</span>
+									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
+									<span className="product-body-font">Fruit of the Loom</span> <br></br>
+									<div><img alt="" className="" src=""/><span className="product-body-font">288</span></div> 
+									<span className="product-body-font">$6.47</span>
 								</div>
 							</div></a>
 
 							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="#"/>
+								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
 								<div className="card-text">
-									<span>Men's Platinum EverSoft Muscle</span>
-									<span>Fruit of the Loom</span>
-									<div><img alt="" className="" src="#"/><span>288</span></div>
-									<span>$6.47</span>
+									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
+									<span className="product-body-font">Fruit of the Loom</span> <br></br>
+									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
+									<span className="product-body-font">$6.47</span>
 								</div>
 							</div></a>
 
 							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="#"/>
+								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
 								<div className="card-text">
-									<span>Men's Platinum EverSoft Muscle</span>
-									<span>Fruit of the Loom</span>
-									<div><img alt="" className="" src="#"/><span>288</span></div>
-									<span>$6.47</span>
+									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
+									<span className="product-body-font">Fruit of the Loom</span> <br></br>
+									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
+									<span className="product-body-font">$6.47</span>
 								</div>
 							</div></a>
 
 							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="#"/>
+								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
 								<div className="card-text">
-									<span>Men's Platinum EverSoft Muscle</span>
-									<span>Fruit of the Loom</span>
-									<div><img alt="" className="" src="#"/><span>288</span></div>
-									<span>$6.47</span>
+									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
+									<span className="product-body-font">Fruit of the Loom</span> <br></br>
+									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
+									<span className="product-body-font">$6.47</span>
 								</div>
 							</div></a>
 
 							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="#"/>
+								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
 								<div className="card-text">
-									<span>Men's Platinum EverSoft Muscle</span>
-									<span>Fruit of the Loom</span>
-									<div><img alt="" className="" src="#"/><span>288</span></div>
-									<span>$6.47</span>
+									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
+									<span className="product-body-font">Fruit of the Loom</span> <br></br>
+									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
+									<span className="product-body-font">$6.47</span>
 								</div>
 							</div></a>
 
 							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="#"/>
+								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
 								<div className="card-text">
-									<span>Men's Platinum EverSoft Muscle</span>
-									<span>Fruit of the Loom</span>
-									<div><img alt="" className="" src="#"/><span>288</span></div>
-									<span>$6.47</span>
+									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
+									<span className="product-body-font">Fruit of the Loom</span> <br></br>
+									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
+									<span className="product-body-font">$6.47</span>
 								</div>
 							</div></a>
 
@@ -156,20 +156,20 @@ class Product extends Component {
 					<div className="customer-reviews">
 						<div className="customer-reviews-bar">
 							<div className="reviews-summary">
-								<span>{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
-								<div><img alt="" src="#" className="total-review-stars"/><span>{this.state.product.rating} out of 5 stars</span></div>
+								<span className="product-title-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
+								<div><img alt="" src="#" className="total-review-stars"/><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
 								<div className="customer-reviews-breakdown-bars">
-									<a href="##"><span>5 Star</span><img alt="" src="#"/><span>49%</span></a>
-									<a href="##"><span>4 Star</span><img alt="" src="#"/><span>21%</span></a>
-									<a href="##"><span>3 Star</span><img alt="" src="#"/><span>7%</span></a>
-									<a href="##"><span>2 Star</span><img alt="" src="#"/><span>9%</span></a>
-									<a href="##"><span>1 Star</span><img alt="" src="#"/><span>14%</span></a>
+									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><span className="text-container product-body-font" >49%</span> <div class="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">21%</span> <div class="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">7%</span> <div class="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">9%</span> <div class="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">14%</span> <div class="meter"><span></span></div> </a>
 								</div>
 							</div>
 
 							<div className="write-a-review">
-								<span>Review this Product</span>
-								<span>Share your thoughts with other customers</span>
+								<span className="product-title-font">Review this Product</span>
+								<span className="product-body-font">Share your thoughts with other customers</span>
 								<button className="write-a-review-button" type="button">Write a Review</button>
 							</div>
 						</div>

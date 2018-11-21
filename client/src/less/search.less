@@ -40,19 +40,45 @@
     width: 15%;
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
     box-sizing: border-box;
     padding: 1%;
+    border-right: 1px solid lightgray;
 
     .refine-results-side-bar-section{
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: rgba(0,0,0,0.1);
         box-sizing: border-box;
         padding: 8%;
     }
+
+    .search-bar-submit{
+        font-family: @Font1;
+        font-size: 0.85rem;
+        color: @secondary-color;
+        font-weight: bold;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+.search-bar-divider{
+    border-top: 1px solid lightgray;
+    width: 100%;
+    height: 1px;
+}
+
+.search-bar-item{
+    margin-bottom: 15px;
+}
+
+.search-to{
+    position: relative;
+    top: 17px;
+    left: 5px;
 }
 
 /*SEARCH RESULTS DISPLAY*/
@@ -63,18 +89,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid black;
 }
 
 .search-result-card{
     width: 23%;
     height: 355px;
-    background-color: lightgray;
-    border: 1px solid grey;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*BACKGROUND GRADIENT*/
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 87%, #f4f4f4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 87%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 87%,#f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 
     .search-result-card-img{
         width: 100%;
@@ -91,6 +120,8 @@
         justify-content: center;
         align-items: center;
         margin: 0px 1% 0px 1%;
+        box-sizing: border-box;
+        padding: 5px;
     }
 }
 

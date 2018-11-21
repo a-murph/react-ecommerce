@@ -96,7 +96,7 @@ class Search extends Component {
 			<div>
 				<nav className="menu-bar">
 					<div className="nav-location-button"></div>
-					<div className="nav-home-logo"></div>
+					<div className="nav-home-logo"><img alt="" className="logo-nav" src="img/logo3.svg"/></div>
 					<div className="nav-search-bar">
 						<div className="nav-search-filter-button"></div>
 						<div className="nav-search-text-input"></div>
@@ -113,13 +113,13 @@ class Search extends Component {
 					<div className="refine-results-count">
 						{
 							this.state.filteredResults.length !== 0 ?
-								<span>1 - {this.state.filteredResults.length} of {this.state.filteredResults.length}</span>
-							: <span>0</span>
+								<span className="search-body-font">1 - {this.state.filteredResults.length} of {this.state.filteredResults.length}</span>
+							: <span className="search-body-font">0</span>
 						}
-						<span> results in </span><span>All Categories: </span><span>"{this.state.searchTerm}"</span>
+						<span className="search-body-font"> results in </span><span className="search-body-font">All Categories: </span><span className="search-body-font">"{this.state.searchTerm}"</span>
 					</div>
 					<div className="refine-results-sort-by-section">
-						<span>Sort by</span>
+						<span className="search-body-font">Sort by</span>
 						<div className="refine-results-drop-down"></div>
 					</div>
 				</div>
@@ -127,50 +127,56 @@ class Search extends Component {
 				<main className="search-main-section">
 
 					<div className="refine-results-side-bar">
-						<span>Show Results For</span>
+						<span className="search-bold-font">Show Results For</span>
 
 						<div className="refine-results-side-bar-section">
-							<span>Price</span>
+							<span className="search-bold-font search-bar-item">Price</span>
 							<form>
-								<input onChange={this.handleFilter} type="text" id="price-min" name="price-min" placeholder="$"/><span>to</span><input onChange={this.handleFilter} type="text" id="price-max" name="price-max" placeholder="$"/><input type="submit" value="Go"/><br/>
-								<input onChange={this.handleFilter} type="radio" defaultChecked name="price-range" data-min={0} data-max={99999}/><span>All Prices</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="price-range" data-min={0} data-max={5}/><span>$0 - $5</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="price-range" data-min={5} data-max={10}/><span>$5 - $10</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="price-range" data-min={10} data-max={15}/><span>$10 - $15</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="price-range" data-min={15} data-max={99999}/><span>$15+</span><br/>
+								<input onChange={this.handleFilter} type="text" id="price-min" className="search-bar-item" name="price-min" placeholder=" $ Min"/><span className="search-body-font search-bar-item search-to">to</span><input onChange={this.handleFilter} type="text" className="search-bar-item" id="price-max" name="price-max" placeholder=" $ Max"/><input className="search-body-font search-bar-item search-bar-submit" type="submit" value="Go"/><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" defaultChecked name="price-range" data-min={0} data-max={99999}/><span className="search-body-font">All Prices</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={0} data-max={5}/><span className="search-body-font">$0 - $5</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={5} data-max={10}/><span className="search-body-font">$5 - $10</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={10} data-max={15}/><span className="search-body-font">$10 - $15</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={15} data-max={99999}/><span className="search-body-font">$15+</span><br/>
 							</form>
 						</div>
 
+						<div className="search-bar-divider"></div>
+
 						<div className="refine-results-side-bar-section">
-							<span>Shipping</span>
+							<span className="search-bold-font search-bar-item">Shipping</span>
 							<form>
-								<input type="radio" name="shipping" value="show-all" defaultChecked/> Show All<br/>
-								<input type="radio" name="shipping" value="free-shipping"/> Free Shipping<br/>
-								<input type="radio" name="shipping" value="same-day-shipping"/> Same Day Shipping<br/>
-								<input type="radio" name="shipping" value="2-day-shipping"/> 2-Day Shipping<br/>
-								<input type="radio" name="shipping" value="standard-shipping"/> Standard Shipping<br/>
+								<input type="radio" name="shipping" className="search-bar-item" value="show-all" defaultChecked/><span className="search-body-font">Show All</span><br/>
+								<input type="radio" name="shipping" className="search-bar-item" value="free-shipping"/><span className="search-body-font">Free Shipping</span><br/>
+								<input type="radio" name="shipping" className="search-bar-item" value="same-day-shipping"/><span className="search-body-font">Same Day Shipping</span><br/>
+								<input type="radio" name="shipping" className="search-bar-item" value="2-day-shipping"/><span className="search-body-font">2-Day Shipping</span><br/>
+								<input type="radio" name="shipping" className="search-bar-item" value="standard-shipping"/><span className="search-body-font">Standard Shipping</span><br/>
 							</form>
 						</div>
 
+						<div className="search-bar-divider"></div>
+
 						<div className="refine-results-side-bar-section">
-							<span>Brand Name</span>
+							<span className="search-bold-font search-bar-item">Brand Name</span>
 							<form>
-								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="A" data-max="Z" defaultChecked/> Show All<br/>
-								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="A" data-max="G"/> A - G<br/>
-								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="H" data-max="M"/> H - M<br/>
-								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="N" data-max="S"/> N - S<br/>
-								<input onChange={this.handleFilter} type="radio" name="brand-name" data-min="T" data-max="Z"/> T - Z<br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="A" data-max="Z" defaultChecked/><span className="search-body-font">Show All</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="A" data-max="G"/><span className="search-body-font">A - G</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="H" data-max="M"/><span className="search-body-font">H - M</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="N" data-max="S"/><span className="search-body-font">N - S</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="T" data-max="Z"/><span className="search-body-font">>T - Z</span><br/>
 							</form>
 						</div>
 
+						<div className="search-bar-divider"></div>
+
 						<div className="refine-results-side-bar-section">
-							<span>Customer Rating</span>
+							<span className="search-bold-font search-bar-item">Customer Rating</span>
 							<form>
-								<input onChange={this.handleFilter} type="radio" defaultChecked name="customer-rating" value={0}/> Show All<br/>
-								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={4}/> <span>4 Stars</span> <span>& Up</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={3}/> <span>3 Stars</span> <span>& Up</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={2}/> <span>2 Stars</span> <span>& Up</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="customer-rating" value={1}/> <span>1 Star</span> <span>& Up</span>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" defaultChecked name="customer-rating" value={0}/><span className="search-body-font">Show All</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={4}/> <span className="search-body-font">4 Stars</span> <span className="search-body-font">& Up</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={3}/> <span className="search-body-font">3 Stars</span> <span className="search-body-font">& Up</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={2}/> <span className="search-body-font">2 Stars</span> <span className="search-body-font">& Up</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={1}/> <span className="search-body-font">1 Star</span> <span className="search-body-font">& Up</span>
 							</form>
 						</div>
 
