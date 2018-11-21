@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import API from "../utils/API"
+import NavBar from "../components/NavBar";
 import SearchResult from "../components/SearchResult";
 
 class Search extends Component {
@@ -94,20 +95,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div>
-				<nav className="menu-bar">
-					<div className="nav-location-button"></div>
-					<div className="nav-home-logo"><img alt="" className="logo-nav" src="img/logo3.svg"/></div>
-					<div className="nav-search-bar">
-						<div className="nav-search-filter-button"></div>
-						<div className="nav-search-text-input"></div>
-						<div className="nav-search-submit-button"></div>
-					</div>
-					<div className="nav-language-dropdown"> </div>
-					<div className="nav-div-bar"></div>
-					<div className="nav-account-dropdown"> </div>
-					<div className="nav-orders-dropdown"> </div>
-					<div className="nav-cart-button"> </div>
-				</nav>
+				<NavBar />
 
 				<div className="refine-results-bar">
 					<div className="refine-results-count">
