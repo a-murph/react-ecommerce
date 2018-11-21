@@ -67,9 +67,9 @@ class Product extends Component {
 					<div className="product-page-top-bar">
 						<div className="top-bar-search-result product-body-font"><span>{this.state.product.category}</span></div>
 						<div className="top-bar-social-media-share">
-							<a className="social-media-share-link" href="##"><i class="fab fa-facebook-f icon"></i></a>
-							<a className="social-media-share-link" href="##"><i class="fab fa-pinterest-p icon"></i></a>
-							<a className="social-media-share-link" href="##"><i class="fab fa-twitter icon"></i></a>
+							<a className="social-media-share-link" href="##"><i className="fab fa-facebook-f icon"></i></a>
+							<a className="social-media-share-link" href="##"><i className="fab fa-pinterest-p icon"></i></a>
+							<a className="social-media-share-link" href="##"><i className="fab fa-twitter icon"></i></a>
 						</div>
 					</div>
 
@@ -135,11 +135,11 @@ class Product extends Component {
 								<span className="product-title-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
 								<div><img alt="" src="#" className="total-review-stars"/><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
 								<div className="customer-reviews-breakdown-bars">
-									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><span className="text-container product-body-font" >49%</span> <div class="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">21%</span> <div class="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">7%</span> <div class="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">9%</span> <div class="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><span className="text-container product-body-font">14%</span> <div class="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i></div><span className="text-container product-body-font" >49%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">21%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">7%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">9%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">14%</span> <div className="meter"><span></span></div> </a>
 								</div>
 							</div>
 
