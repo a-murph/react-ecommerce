@@ -1,9 +1,54 @@
 import React, {Component} from "react";
 import UserReview from "../components/UserReview";
+import RecommendedItem from "../components/RecommendedItem";
 
 class Product extends Component {
 	state = {
-		product: {}
+		product: {},
+		recommended: [
+			{
+				name: "Men's Platinum EverSoft Muscle",
+				brand: "Fruit of the Loom",
+				price: 6.47,
+				image: "/img/product/reccomended.png",
+				_id: "notrealyet"
+			},
+			{
+				name: "Men's Platinum EverSoft Muscle",
+				brand: "Fruit of the Loom",
+				price: 6.47,
+				image: "/img/product/reccomended.png",
+				_id: "notrealyet"
+			},
+			{
+				name: "Men's Platinum EverSoft Muscle",
+				brand: "Fruit of the Loom",
+				price: 6.47,
+				image: "/img/product/reccomended.png",
+				_id: "notrealyet"
+			},
+			{
+				name: "Men's Platinum EverSoft Muscle",
+				brand: "Fruit of the Loom",
+				price: 6.47,
+				image: "/img/product/reccomended.png",
+				_id: "notrealyet"
+			},
+			{
+				name: "Men's Platinum EverSoft Muscle",
+				brand: "Fruit of the Loom",
+				price: 6.47,
+				image: "/img/product/reccomended.png",
+				_id: "notrealyet"
+			},
+			{
+				name: "Men's Platinum EverSoft Muscle",
+				brand: "Fruit of the Loom",
+				price: 6.47,
+				image: "/img/product/reccomended.png",
+				_id: "notrealyet"
+			},
+		]
 	};
 
 	componentDidMount() {
@@ -90,66 +135,9 @@ class Product extends Component {
 					<div className="recommended-products">
 						<span className="product-title-font title">Customers Also Bought These Products</span>
 						<div className="recommended-products-card-section">
-							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
-								<div className="card-text">
-									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
-									<span className="product-body-font">Fruit of the Loom</span> <br></br>
-									<div><img alt="" className="" src=""/><span className="product-body-font">288</span></div> 
-									<span className="product-body-font">$6.47</span>
-								</div>
-							</div></a>
-
-							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
-								<div className="card-text">
-									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
-									<span className="product-body-font">Fruit of the Loom</span> <br></br>
-									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
-									<span className="product-body-font">$6.47</span>
-								</div>
-							</div></a>
-
-							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
-								<div className="card-text">
-									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
-									<span className="product-body-font">Fruit of the Loom</span> <br></br>
-									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
-									<span className="product-body-font">$6.47</span>
-								</div>
-							</div></a>
-
-							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
-								<div className="card-text">
-									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
-									<span className="product-body-font">Fruit of the Loom</span> <br></br>
-									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
-									<span className="product-body-font">$6.47</span>
-								</div>
-							</div></a>
-
-							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
-								<div className="card-text">
-									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
-									<span className="product-body-font">Fruit of the Loom</span> <br></br>
-									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
-									<span className="product-body-font">$6.47</span>
-								</div>
-							</div></a>
-
-							<a className="recommended-products-card-anchor" href="##"><div className="recommended-products-card">
-								<img alt="" className="card-img" src="/img/product/reccomended.png"/>
-								<div className="card-text">
-									<span className="product-bold-font">Men's Platinum EverSoft Muscle</span> <br></br>
-									<span className="product-body-font">Fruit of the Loom</span> <br></br>
-									<div><img alt="" className="" src="#"/><span className="product-body-font">288</span></div> 
-									<span className="product-body-font">$6.47</span>
-								</div>
-							</div></a>
-
+							{this.state.recommended.map((item, index) => {
+								return <RecommendedItem product={item} key={index} />
+							})}
 						</div>
 					</div>
 
