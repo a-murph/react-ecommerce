@@ -122,10 +122,10 @@ class Search extends Component {
 							<form>
 								<input onChange={this.handleFilter} type="text" id="price-min" className="search-bar-item" name="price-min" placeholder=" $ Min"/><span className="search-body-font search-bar-item search-to">to</span><input onChange={this.handleFilter} type="text" className="search-bar-item" id="price-max" name="price-max" placeholder=" $ Max"/><input className="search-body-font search-bar-item search-bar-submit" type="submit" value="Go"/><br/>
 								<input onChange={this.handleFilter} type="radio" className="search-bar-item" defaultChecked name="price-range" data-min={0} data-max={99999}/><span className="search-body-font">All Prices</span><br/>
-								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={0} data-max={5}/><span className="search-body-font">$0 - $5</span><br/>
-								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={5} data-max={10}/><span className="search-body-font">$5 - $10</span><br/>
-								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={10} data-max={15}/><span className="search-body-font">$10 - $15</span><br/>
-								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={15} data-max={99999}/><span className="search-body-font">$15+</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={0} data-max={25}/><span className="search-body-font">$0 - $25</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={25} data-max={50}/><span className="search-body-font">$25 - $50</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={50} data-max={100}/><span className="search-body-font">$50 - $100</span><br/>
+								<input onChange={this.handleFilter} type="radio" className="search-bar-item" name="price-range" data-min={100} data-max={999999}/><span className="search-body-font">$100+</span><br/>
 							</form>
 						</div>
 
