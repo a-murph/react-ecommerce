@@ -6,6 +6,7 @@ import SearchResult from "../components/SearchResult";
 class Search extends Component {
 	state = {
 		searchTerm: "",
+		category: "",
 		results: [],
 		filteredResults: []
 	};
@@ -13,11 +14,13 @@ class Search extends Component {
 	componentDidMount() {
 		let urlParams = new URLSearchParams(window.location.search);
 		let s = urlParams.get('s');
+		let c = urlParams.get('c');
 
 		this.setState({
-			searchTerm: s
+			searchTerm: s,
+			category: c
 		}, () => {
-			API.search(this.state.searchTerm).then(res => {
+			API.search(this.state.searchTerm, this.state.category).then(res => {
 				this.setState({
 					results: res.data,
 					filteredResults: res.data
@@ -113,7 +116,7 @@ class Search extends Component {
 							<option value="low-high">Price: Low - High</option>
 							<option value="high-low">Price: High - Low</option>
 							<option value="review-count">Review Count</option>
-						</select> 
+						</select>
 					</div>
 				</div>
 
