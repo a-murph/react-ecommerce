@@ -1,21 +1,7 @@
 import React, { Component } from "react";
+import SearchBar from "../components/SearchBar";
 
 class Home extends Component {
-	state = {
-		searchTerm: ""
-	};
-
-	handleSearchInput = event => {
-		this.setState({
-			searchTerm: event.target.value
-		});
-	};
-
-	handleTextInputSearch = event => {
-		if (event.key === "Enter")
-			this.props.history.push(`/search?s=${this.state.searchTerm}`);
-	};
-
 	render() {
 		return (
 			<div className="container">
@@ -36,13 +22,7 @@ class Home extends Component {
 							<span className="nav-title-font">Login/Signup</span>
 						</div>
 					</div>
-					<div className="home-nav-search-bar">
-						<div className="home-nav-search-filter-button">
-							<span className="nav-font-dark">All <i className="fas fa-sort-down"></i></span>
-						</div>
-						<input type="text" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={this.handleTextInputSearch}></input>
-						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}></input><i className="fas fa-search icon"></i></div>
-					</div>
+					<SearchBar />
 					<div className="home-nav-account-dropdown">
 						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>
 					</div>
