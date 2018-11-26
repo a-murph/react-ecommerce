@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 
 class Home extends Component {
@@ -70,26 +71,26 @@ class Home extends Component {
 				<div className="more-to-discover">
 					<span className="discover-title-font">SEE OUR LATEST DEALS IN</span>
 					<div className="more-to-discover-item-container">
-						<a className="more-to-discover-item" href="##">
+						<Link className="more-to-discover-item" to="/search?s=&c=Clothing">
 							<img alt="" className="more-to-discover-item-img" src="img/index/c.png" />
 							<span className="more-to-discover-text discover-font">CLOTHING</span>
-						</a>
-						<a className="more-to-discover-item" href="##">
+						</Link>
+						<Link className="more-to-discover-item" to="/search?s=&c=Electronics">
 							<img alt="" className="more-to-discover-item-img" src="img/index/e.jpg" />
 							<span className="more-to-discover-text discover-font">ELECTRONICS</span>
-						</a>
-						<a className="more-to-discover-item" href="##">
+						</Link>
+						<Link className="more-to-discover-item" to="/search?s=&c=HealthandBeauty">
 							<img alt="" className="more-to-discover-item-img" src="img/index/a.jpg" />
 							<span className="more-to-discover-text discover-font">HEALTH AND BEAUTY</span>
-						</a>
-						<a className="more-to-discover-item" href="##">
+						</Link>
+						<Link className="more-to-discover-item" to="/search?s=&c=Home">
 							<img alt="" className="more-to-discover-item-img" src="img/index/b.png" />
 							<span className="more-to-discover-text discover-font">HOME</span>
-						</a>
-						<a className="more-to-discover-item" href="##">
+						</Link>
+						<Link className="more-to-discover-item" to="/search?s=&c=Media">
 							<img alt="" className="more-to-discover-item-img" src="img/index/d.jpg" />
 							<span className="more-to-discover-text discover-font">MEDIA</span>
-						</a>
+						</Link>
 					</div>
 				</div>
 
