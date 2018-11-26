@@ -32,7 +32,7 @@ class Home extends Component {
 				<nav className="home-menu-bar">
 					<div className="home-nav-menu-container">
 						<div className="text-container">
-							<div className="home-nav-menu-button"><i class="fas fa-bars"></i></div>
+							<div className="home-nav-menu-button"><i className="fas fa-bars"></i></div>
 							<span className="nav-title-font">Login/Signup</span>
 						</div>
 					</div>

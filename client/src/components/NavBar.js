@@ -5,7 +5,7 @@ class NavBar extends Component {
 	render() {
 		return (
 			<nav className="menu-bar">
-				<div className="nav-menu-button"><i class="fas fa-bars"></i></div>
+				<div className="nav-menu-button"><i className="fas fa-bars"></i></div>
 				<div className="nav-home-logo"><Link to="/"><img alt="" className="logo-nav" src="/img/logo3.svg"/></Link></div>
 				<div className="nav-search-bar">
 					<div className="nav-search-filter-button"><span className="nav-font-dark">All</span><i className="fas fa-sort-down refine-icon"></i></div>
