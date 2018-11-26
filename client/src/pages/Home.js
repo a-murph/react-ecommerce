@@ -22,7 +22,7 @@ class Home extends Component {
 							<span className="nav-title-font">Login/Signup</span>
 						</div>
 					</div>
-					<SearchBar />
+					<SearchBar page="home" />
 					<div className="home-nav-account-dropdown">
 						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>
 					</div>
