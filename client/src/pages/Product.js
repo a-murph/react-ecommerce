@@ -114,10 +114,10 @@ class Product extends Component {
 
 					<div className="product-description">
 						<div className="product-description-text">
-							<span className="product-title-font">About This Item</span>
+							<span className="product-title-font title">About This Item</span>
 							<span className="product-body-font">{this.state.product.description}</span>
 						</div>
-						<img alt="" src="#" className="product-description-img"/>
+						<img alt="" className="product-description-img" src={`/${this.state.product.image}`}/>
 					</div>
 
 					<div className="recommended-products">
@@ -135,11 +135,11 @@ class Product extends Component {
 								<span className="product-title-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
 								<div><img alt="" src="#" className="total-review-stars"/><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
 								<div className="customer-reviews-breakdown-bars">
-									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i></div><span className="text-container product-body-font" >49%</span> <div className="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">21%</span> <div className="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">7%</span> <div className="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">9%</span> <div className="meter"><span></span></div> </a>
-									<a href="##"><div className="star-container"><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div><span className="text-container product-body-font">14%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><img alt="" src="/img/stars/5-star.svg"/></div><span className="text-container product-body-font">--%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><img alt="" src="/img/stars/4-star.svg"/></div><span className="text-container product-body-font">--%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><img alt="" src="/img/stars/3-star.svg"/></div><span className="text-container product-body-font">--%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><img alt="" src="/img/stars/2-star.svg"/></div><span className="text-container product-body-font">--%</span> <div className="meter"><span></span></div> </a>
+									<a href="##"><div className="star-container"><img alt="" src="/img/stars/1-star.svg"/></div><span className="text-container product-body-font">--%</span> <div className="meter"><span></span></div> </a>
 								</div>
 							</div>
 

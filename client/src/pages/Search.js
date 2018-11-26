@@ -108,7 +108,12 @@ class Search extends Component {
 					</div>
 					<div className="refine-results-sort-by-section">
 						<span className="search-body-font">Sort by</span>
-						<div className="refine-results-drop-down"></div>
+						<select className="refine-results-drop-down search-body-font" name="sort-by">
+							<option value="best-match">Best Match</option>
+							<option value="low-high">Price: Low - High</option>
+							<option value="high-low">Price: High - Low</option>
+							<option value="review-count">Review Count</option>
+						</select> 
 					</div>
 				</div>
 
@@ -151,7 +156,7 @@ class Search extends Component {
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="A" data-max="G"/><span className="search-body-font">A - G</span><br/>
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="H" data-max="M"/><span className="search-body-font">H - M</span><br/>
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="N" data-max="S"/><span className="search-body-font">N - S</span><br/>
-								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="T" data-max="Z"/><span className="search-body-font">>T - Z</span><br/>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="T" data-max="Z"/><span className="search-body-font">T - Z</span><br/>
 							</form>
 						</div>
 

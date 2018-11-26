@@ -30,9 +30,10 @@ class Home extends Component {
 				</div>
 
 				<nav className="home-menu-bar">
-					<div className="home-nav-location-button">
+					<div className="home-nav-menu-container">
 						<div className="text-container">
-							<span className="nav-title-font">Welcome, User!</span>
+							<div className="home-nav-menu-button"><i class="fas fa-bars"></i></div>
+							<span className="nav-title-font">Login/Signup</span>
 						</div>
 					</div>
 					<div className="home-nav-search-bar">
@@ -40,18 +41,17 @@ class Home extends Component {
 							<span className="nav-font-dark">All <i className="fas fa-sort-down"></i></span>
 						</div>
 						<input type="text" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={this.handleTextInputSearch}></input>
-						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}></input></div>
+						<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={() => { this.props.history.push(`/search?s=${this.state.searchTerm}`) }}></input><i className="fas fa-search icon"></i></div>
 					</div>
 					<div className="home-nav-account-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down"></i></div>
+						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>
 					</div>
 					<div className="home-nav-orders-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down"></i></div>
+						<div className="bottom-container"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down nav-icon"></i></div>
 					</div>
 					<div className="home-nav-cart-button">
-						<i className="fas fa-shopping-cart"></i>
+						<img alt="" className="img" src="img/shopping-cart-solid.svg"/>
 						<span className="nav-title-font">Cart</span>
-						<span className="cart-font">0</span>
 					</div>
 				</nav>
 
@@ -91,24 +91,24 @@ class Home extends Component {
 					<span className="discover-title-font">SEE OUR LATEST DEALS IN</span>
 					<div className="more-to-discover-item-container">
 						<a className="more-to-discover-item" href="##">
+							<img alt="" className="more-to-discover-item-img" src="img/index/c.png" />
+							<span className="more-to-discover-text discover-font">CLOTHING</span>
+						</a>
+						<a className="more-to-discover-item" href="##">
 							<img alt="" className="more-to-discover-item-img" src="img/index/e.jpg" />
 							<span className="more-to-discover-text discover-font">ELECTRONICS</span>
 						</a>
 						<a className="more-to-discover-item" href="##">
-							<img alt="" className="more-to-discover-item-img" src="img/index/b.png" />
-							<span className="more-to-discover-text discover-font">HOME DECOR</span>
-						</a>
-						<a className="more-to-discover-item" href="##">
-							<img alt="" className="more-to-discover-item-img" src="img/index/c.png" />
-							<span className="more-to-discover-text discover-font">FASHION</span>
-						</a>
-						<a className="more-to-discover-item" href="##">
 							<img alt="" className="more-to-discover-item-img" src="img/index/a.jpg" />
-							<span className="more-to-discover-text discover-font">BEAUTY</span>
+							<span className="more-to-discover-text discover-font">HEALTH AND BEAUTY</span>
+						</a>
+						<a className="more-to-discover-item" href="##">
+							<img alt="" className="more-to-discover-item-img" src="img/index/b.png" />
+							<span className="more-to-discover-text discover-font">HOME</span>
 						</a>
 						<a className="more-to-discover-item" href="##">
 							<img alt="" className="more-to-discover-item-img" src="img/index/d.jpg" />
-							<span className="more-to-discover-text discover-font">BOOKS</span>
+							<span className="more-to-discover-text discover-font">MEDIA</span>
 						</a>
 					</div>
 				</div>
@@ -142,7 +142,7 @@ class Home extends Component {
 						<span className="signup-body-font">SIGN UP AND START RECIEVING PERKS</span>
 					</a>
 					<a className="signup-section-button" href="##">
-						<span className="signup-body-font"> <i className="far fa-envelope signup-body-font"></i> INSIDER INTEL: SIGN UP FOR EMAILS</span>
+						<span className="signup-body-font"> <i className="far fa-envelope"></i> INSIDER INTEL: SIGN UP FOR EMAILS</span>
 					</a>
 				</div>
 
