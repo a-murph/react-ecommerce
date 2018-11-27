@@ -61,6 +61,20 @@ class Search extends Component {
 				break;
 
 			case "shipping":
+				let shippingType = event.target.value;
+				let shippingFiltered = [];
+
+				shippingFiltered = this.state.results.filter(product => {
+					return product.shipping === shippingType;
+				});
+
+				if (shippingType === "all")
+					shippingFiltered = this.state.results;
+
+				this.setState({
+					filteredResults: shippingFiltered
+				});
+
 				break;
 
 			case "brand-name":
@@ -142,11 +156,11 @@ class Search extends Component {
 						<div className="refine-results-side-bar-section">
 							<span className="search-bold-font search-bar-item">Shipping</span>
 							<form>
-								<input type="radio" name="shipping" className="search-bar-item" value="show-all" defaultChecked/><span className="search-body-font">Show All</span><br/>
-								<input type="radio" name="shipping" className="search-bar-item" value="free-shipping"/><span className="search-body-font">Free Shipping</span><br/>
-								<input type="radio" name="shipping" className="search-bar-item" value="same-day-shipping"/><span className="search-body-font">Same Day Shipping</span><br/>
-								<input type="radio" name="shipping" className="search-bar-item" value="2-day-shipping"/><span className="search-body-font">2-Day Shipping</span><br/>
-								<input type="radio" name="shipping" className="search-bar-item" value="standard-shipping"/><span className="search-body-font">Standard Shipping</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="all" defaultChecked/><span className="search-body-font">Show All</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="FREE SHIPPING"/><span className="search-body-font">Free Shipping</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="Same Day Shipping"/><span className="search-body-font">Same Day Shipping</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="2-day Shipping"/><span className="search-body-font">2-Day Shipping</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="Standard Shipping"/><span className="search-body-font">Standard Shipping</span><br/>
 							</form>
 						</div>
 
