@@ -22,9 +22,10 @@ class SearchBar extends Component {
 	};
 
 	handleSearch = () => {
-		this.setState({
-			redirect: true
-		});
+		if (this.state.searchTerm)
+			this.setState({
+				redirect: true
+			});
 	};
 
 	render() {
@@ -35,7 +36,7 @@ class SearchBar extends Component {
 			return (
 				<div className="home-nav-search-bar">
 					<div className="home-nav-search-filter-button">
-						<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark"><i className="fas fa-sort-down"></i>
+						<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark">
 							<option>All</option>
 							<option>Electronics</option>
 							<option>Clothing</option>
@@ -52,7 +53,7 @@ class SearchBar extends Component {
 		return (
 			<div className="nav-search-bar">
 				<div className="nav-search-filter-button">
-					<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark"><i className="fas fa-sort-down"></i>
+					<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark">
 						<option>All</option>
 						<option>Electronics</option>
 						<option>Clothing</option>

@@ -65,7 +65,7 @@ class Product extends Component {
 
 				<main>
 					<div className="product-page-top-bar">
-						<div className="top-bar-search-result product-body-font"><span>{this.state.product.category}</span></div>
+						<div className="top-bar-search-result product-body-font"><span>{this.state.product.category} > {this.state.product.subcategory}</span></div>
 						<div className="top-bar-social-media-share">
 							<a className="social-media-share-link" href="##"><i className="fab fa-facebook-f icon"></i></a>
 							<a className="social-media-share-link" href="##"><i className="fab fa-pinterest-p icon"></i></a>
@@ -101,7 +101,7 @@ class Product extends Component {
 
 
 							<div className="main-info-quantity-add-to-card">
-									<div><span className="product-body-font">Quantity:</span> <input type="number"/></div>
+									<div><span className="product-body-font">Quantity:</span> <input type="number" min={0} /></div>
 									<button className="product-body-font add-to-cart-button" type="button">Add to Cart</button>
 							</div>
 
