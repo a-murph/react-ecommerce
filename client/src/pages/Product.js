@@ -157,13 +157,63 @@ class Product extends Component {
 						<div className="customer-reviews-bar">
 							<div className="reviews-summary">
 								<span className="product-title-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
-								<div><img alt="" src="#" className="total-review-stars"/><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
+								<div><img alt="" src="#" className="total-review-stars" /><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
 								<div className="customer-reviews-breakdown-bars">
-									<a href="##"><div className="star-container"><img alt="" src="/img/stars/5-star.svg"/></div><span className="text-container product-body-font">{(this.state.ratings[5]/(this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)*100}%</span> <div className="meter"><span></span></div></a>
-									<a href="##"><div className="star-container"><img alt="" src="/img/stars/4-star.svg"/></div><span className="text-container product-body-font">{(this.state.ratings[4]/(this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)*100}%</span> <div className="meter"><span></span></div></a>
-									<a href="##"><div className="star-container"><img alt="" src="/img/stars/3-star.svg"/></div><span className="text-container product-body-font">{(this.state.ratings[3]/(this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)*100}%</span> <div className="meter"><span></span></div></a>
-									<a href="##"><div className="star-container"><img alt="" src="/img/stars/2-star.svg"/></div><span className="text-container product-body-font">{(this.state.ratings[2]/(this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)*100}%</span> <div className="meter"><span></span></div></a>
-									<a href="##"><div className="star-container"><img alt="" src="/img/stars/1-star.svg"/></div><span className="text-container product-body-font">{(this.state.ratings[1]/(this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)*100}%</span> <div className="meter"><span></span></div></a>
+									<a href="##">
+										<div className="star-container">
+											<img alt="" src="/img/stars/5-star.svg" />
+										</div>
+										<span className="text-container product-body-font">
+											{(this.state.ratings[5] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
+										</span>
+										<meter className="meter"
+											value={(this.state.ratings[5] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)}>
+										<span></span></meter>
+									</a>
+									<a href="##">
+										<div className="star-container">
+											<img alt="" src="/img/stars/4-star.svg" />
+										</div>
+										<span className="text-container product-body-font">
+											{(this.state.ratings[4] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
+										</span>
+										<meter className="meter"
+											value={(this.state.ratings[4] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)}>
+										<span></span></meter>
+									</a>
+									<a href="##">
+										<div className="star-container">
+											<img alt="" src="/img/stars/3-star.svg" />
+										</div>
+										<span className="text-container product-body-font">
+											{(this.state.ratings[3] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
+										</span>
+										<meter className="meter"
+											value={(this.state.ratings[3] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)}>
+										<span></span></meter>
+									</a>
+									<a href="##">
+										<div className="star-container">
+											<img alt="" src="/img/stars/2-star.svg" />
+										</div>
+										<span className="text-container product-body-font">
+											{(this.state.ratings[2] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
+										</span>
+										<meter className="meter"
+											value={(this.state.ratings[2] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)}>
+										<span></span></meter>
+									</a>
+									<a href="##">
+										<div className="star-container">
+											<img alt="" src="/img/stars/1-star.svg" />
+										</div>
+										<span className="text-container product-body-font">
+											{(this.state.ratings[1] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
+										</span>
+										<meter className="meter"
+											value={(this.state.ratings[1] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2)}>
+										<span></span></meter>
+									</a>
 								</div>
 							</div>
 
