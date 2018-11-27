@@ -95,8 +95,16 @@ class Product extends Component {
 
 
 							<div className="main-info-sizing-color">
-									<div><span className="product-body-font">Size:</span> <span className="product-body-font">Small</span></div>
-									<div><span className="product-body-font">Color:</span> <span className="product-body-font">Black</span></div>
+								{this.state.product.size ? (
+									<select>
+										{this.state.product.size.map((size, index) => <option key={index}>{size}</option>)}
+									</select>
+								) : ""}
+								{this.state.product.color ? (
+									<select>
+										{this.state.product.color.map((color, index) => <option key={index}>{color}</option>)}
+									</select>
+								) : ""}
 							</div>
 
 
