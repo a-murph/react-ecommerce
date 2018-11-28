@@ -24,7 +24,11 @@ class Search extends Component {
 				this.setState({
 					results: res.data,
 					filteredResults: res.data
-				}, () => {console.log(this.state.results)});
+				}, () => {
+					if (urlParams.get('o')) {
+						this.handleSort({target: {value: urlParams.get('o')}});
+					}
+				});
 			});
 		});
 	};
@@ -109,6 +113,44 @@ class Search extends Component {
 		}
 	};
 
+	handleSort = event => {
+		let sort = event.target.value;
+
+		switch (sort) {
+			case "best-match":
+				let sortedBest = this.state.filteredResults;
+				sortedBest.sort((a, b) => a._id - b._id);
+				this.setState({
+					filteredResults: sortedBest
+				});
+				break;
+
+			case "low-high":
+				let sortedLoHigh = this.state.filteredResults;
+				sortedLoHigh.sort((a, b) => a.price - b.price);
+				this.setState({
+					filteredResults: sortedLoHigh
+				});
+				break;
+
+			case "high-low":
+				let sortedHighLo = this.state.filteredResults;
+				sortedHighLo.sort((a, b) => b.price - a.price);
+				this.setState({
+					filteredResults: sortedHighLo
+				});
+				break;
+
+			case "review-count":
+				let sortedReviews = this.state.filteredResults;
+				sortedReviews.sort((a, b) => b.reviews.length - a.reviews.length);
+				this.setState({
+					filteredResults: sortedReviews
+				});
+				break;
+		}
+	};
+
 	render() {
 		return (
 			<div>
@@ -125,7 +167,7 @@ class Search extends Component {
 					</div>
 					<div className="refine-results-sort-by-section">
 						<span className="search-body-font">Sort by</span>
-						<select className="refine-results-drop-down search-body-font" name="sort-by">
+						<select onChange={this.handleSort} className="refine-results-drop-down search-body-font" name="sort-by">
 							<option value="best-match">Best Match</option>
 							<option value="low-high">Price: Low - High</option>
 							<option value="high-low">Price: High - Low</option>
@@ -157,7 +199,7 @@ class Search extends Component {
 							<span className="search-bold-font search-bar-item">Shipping</span>
 							<form>
 								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="all" defaultChecked/><span className="search-body-font">Show All</span><br/>
-								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="FREE SHIPPING"/><span className="search-body-font">Free Shipping</span><br/>
+								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="FREE Shipping"/><span className="search-body-font">Free Shipping</span><br/>
 								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="Same Day Shipping"/><span className="search-body-font">Same Day Shipping</span><br/>
 								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="2-day Shipping"/><span className="search-body-font">2-Day Shipping</span><br/>
 								<input onChange={this.handleFilter} type="radio" name="shipping" className="search-bar-item" value="Standard Shipping"/><span className="search-body-font">Standard Shipping</span><br/>
