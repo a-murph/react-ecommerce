@@ -9,7 +9,8 @@ class Search extends Component {
 		category: "",
 		results: [],
 		filteredResults: [],
-		sort: "best-match"
+		sort: "best-match",
+		brands: []
 	};
 
 	componentDidMount() {
@@ -33,6 +34,17 @@ class Search extends Component {
 							sort: urlParams.get('o')
 						});
 					}
+
+					let newBrands = this.state.brands;
+					this.state.filteredResults.forEach(product => {
+						if (this.state.brands.indexOf(product.brand) === -1) {
+							newBrands.push(product.brand);
+						}
+					});
+					newBrands.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+					this.setState({
+						brands: newBrands
+					}, () => {console.log(this.state.brands)});
 				});
 			});
 		});
@@ -87,16 +99,21 @@ class Search extends Component {
 				break;
 
 			case "brand-name":
-				let brandMin = event.target.dataset.min;
-				let brandMax = event.target.dataset.max;
+				let brand = event.target.dataset.brand;
 
-				let brandFiltered = this.state.results.filter(product => {
-					return product.brand[0] >= brandMin && product.brand[0] <= brandMax;
-				});
+				if (brand !== "all") {
+					let brandFiltered = this.state.results.filter(product => {
+						return product.brand === brand;
+					});
 
-				this.setState({
-					filteredResults: brandFiltered
-				});
+					this.setState({
+						filteredResults: brandFiltered
+					});
+				} else {
+					this.setState({
+						filteredResults: this.state.results
+					});
+				}
 
 				break;
 
@@ -217,19 +234,6 @@ class Search extends Component {
 						<div className="search-bar-divider"></div>
 
 						<div className="refine-results-side-bar-section">
-							<span className="search-bold-font search-bar-item">Brand Name</span>
-							<form>
-								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="A" data-max="Z" defaultChecked/><span className="search-body-font">Show All</span><br/>
-								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="A" data-max="G"/><span className="search-body-font">A - G</span><br/>
-								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="H" data-max="M"/><span className="search-body-font">H - M</span><br/>
-								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="N" data-max="S"/><span className="search-body-font">N - S</span><br/>
-								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-min="T" data-max="Z"/><span className="search-body-font">T - Z</span><br/>
-							</form>
-						</div>
-
-						<div className="search-bar-divider"></div>
-
-						<div className="refine-results-side-bar-section">
 							<span className="search-bold-font search-bar-item">Customer Rating</span>
 							<form>
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" defaultChecked name="customer-rating" value={0}/><span className="search-body-font">Show All</span><br/>
@@ -237,6 +241,20 @@ class Search extends Component {
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={3}/> <span className="search-body-font">3 Stars</span> <span className="search-body-font">& Up</span><br/>
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={2}/> <span className="search-body-font">2 Stars</span> <span className="search-body-font">& Up</span><br/>
 								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="customer-rating" value={1}/> <span className="search-body-font">1 Star</span> <span className="search-body-font">& Up</span>
+							</form>
+						</div>
+
+						<div className="search-bar-divider"></div>
+
+						<div className="refine-results-side-bar-section">
+							<span className="search-bold-font search-bar-item">Brand Name</span>
+							<form>
+								<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-brand="all" defaultChecked/><span className="search-body-font">Show All</span><br/>
+								{this.state.brands.map((brand, index) => (
+									<div key={index}>
+										<input onChange={this.handleFilter} className="search-bar-item" type="radio" name="brand-name" data-brand={brand}/><span className="search-body-font">{brand}</span><br/>
+									</div>
+								))}
 							</form>
 						</div>
 
