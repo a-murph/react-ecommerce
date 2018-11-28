@@ -21,7 +21,8 @@ class Search extends Component {
 			searchTerm: s,
 			category: c
 		}, () => {
-			API.search(this.state.searchTerm, this.state.category).then(res => {
+			let sub = (urlParams.get('sub') && urlParams.get('sub') === "true")
+			API.search(this.state.searchTerm, this.state.category, sub).then(res => {
 				this.setState({
 					results: res.data,
 					filteredResults: res.data

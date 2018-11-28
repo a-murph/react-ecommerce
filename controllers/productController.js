@@ -4,6 +4,8 @@ module.exports = {
 	search: function (req, res) {
 		let s = req.query.s;
 		let c = req.query.c;
+		let sub = (req.query.sub === "true")
+		console.log(sub);
 
 		let query = {
 			"name": {
@@ -14,21 +16,40 @@ module.exports = {
 
 		console.log(c);
 		if (c !== "All") {
-			query = {
-				$and: [
-					{
-						"name": {
-							"$regex": s,
-							"$options": "i"
-						}
-					},
-					{
-						"category": {
-							"$regex": c,
-							"$options": "i"
-						}
-					},
-				]
+			if (sub) {
+				query = {
+					$and: [
+						{
+							"name": {
+								"$regex": s,
+								"$options": "i"
+							}
+						},
+						{
+							"subcategory": {
+								"$regex": c,
+								"$options": "i"
+							}
+						},
+					]
+				}
+			} else {
+				query = {
+					$and: [
+						{
+							"name": {
+								"$regex": s,
+								"$options": "i"
+							}
+						},
+						{
+							"category": {
+								"$regex": c,
+								"$options": "i"
+							}
+						},
+					]
+				}
 			}
 		}
 
