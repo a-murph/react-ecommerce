@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import API from "../utils/API"
 import NavBar from "../components/NavBar";
 import UserReview from "../components/UserReview";
 import RecommendedItem from "../components/RecommendedItem";
@@ -7,50 +8,7 @@ import RecommendedItem from "../components/RecommendedItem";
 class Product extends Component {
 	state = {
 		product: {},
-		recommended: [
-			{
-				name: "Men's Platinum EverSoft Muscle",
-				brand: "Fruit of the Loom",
-				price: 6.47,
-				image: "/img/product/reccomended.png",
-				_id: "notrealyet"
-			},
-			{
-				name: "Men's Platinum EverSoft Muscle",
-				brand: "Fruit of the Loom",
-				price: 6.47,
-				image: "/img/product/reccomended.png",
-				_id: "notrealyet"
-			},
-			{
-				name: "Men's Platinum EverSoft Muscle",
-				brand: "Fruit of the Loom",
-				price: 6.47,
-				image: "/img/product/reccomended.png",
-				_id: "notrealyet"
-			},
-			{
-				name: "Men's Platinum EverSoft Muscle",
-				brand: "Fruit of the Loom",
-				price: 6.47,
-				image: "/img/product/reccomended.png",
-				_id: "notrealyet"
-			},
-			{
-				name: "Men's Platinum EverSoft Muscle",
-				brand: "Fruit of the Loom",
-				price: 6.47,
-				image: "/img/product/reccomended.png",
-				_id: "notrealyet"
-			},
-			{
-				name: "Men's Platinum EverSoft Muscle",
-				brand: "Fruit of the Loom",
-				price: 6.47,
-				image: "/img/product/reccomended.png",
-				_id: "notrealyet"
-			},
-		],
+		recommended: [],
 		ratings: [
 			[0],
 			[0],
@@ -70,6 +28,12 @@ class Product extends Component {
 				scores[review.rating]++;
 				this.setState({
 					ratings: scores
+				});
+			});
+
+			API.search("", this.state.product.subcategory, true).then(res => {
+				this.setState({
+					recommended: res.data
 				});
 			});
 		});
@@ -146,10 +110,11 @@ class Product extends Component {
 					</div>
 
 					<div className="recommended-products">
-						<span className="product-title-font title">Customers Also Bought These Products</span>
+						<span className="product-title-font title">Customers Also Viewed These Products</span>
 						<div className="recommended-products-card-section">
 							{this.state.recommended.map((item, index) => {
-								return <RecommendedItem product={item} key={index} />
+								if (index < 6)
+									return <RecommendedItem product={item} key={index} />
 							})}
 						</div>
 					</div>
