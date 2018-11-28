@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import NavBar from "../components/NavBar";
 import UserReview from "../components/UserReview";
 import RecommendedItem from "../components/RecommendedItem";
@@ -81,7 +82,7 @@ class Product extends Component {
 
 				<main>
 					<div className="product-page-top-bar">
-						<div className="top-bar-search-result product-body-font"><span>{this.state.product.category} > {this.state.product.subcategory}</span></div>
+						<div className="top-bar-search-result product-body-font"><span><Link to={`/search?s=&c=${this.state.product.category}`}>{this.state.product.category}</Link> > <Link to={`/search?s=&c=${this.state.product.subcategory}&sub=true`}>{this.state.product.subcategory}</Link></span></div>
 						<div className="top-bar-social-media-share">
 							<a className="social-media-share-link" href="##"><i className="fab fa-facebook-f icon"></i></a>
 							<a className="social-media-share-link" href="##"><i className="fab fa-pinterest-p icon"></i></a>
