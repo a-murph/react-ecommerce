@@ -16,7 +16,8 @@ class Product extends Component {
 			[0],
 			[0],
 			[0]
-		]
+		],
+		imageId: 0
 	};
 
 	componentDidMount() {
@@ -35,6 +36,12 @@ class Product extends Component {
 				this.setState({
 					recommended: res.data
 				});
+			});
+
+			let image = this.state.product.image.split(".");
+			console.log(image);
+			this.setState({
+				imageId: image[0]
 			});
 		});
 	};
@@ -106,7 +113,7 @@ class Product extends Component {
 							<span className="product-title-font title">About This Item</span>
 							<span className="product-body-font">{this.state.product.description}</span>
 						</div>
-						<img alt="" className="product-description-img" src={`/${this.state.product.image}`}/>
+						<img alt="" className="product-description-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.src=`/${this.state.product.image}`}} />
 					</div>
 
 					<div className="recommended-products">
@@ -125,7 +132,7 @@ class Product extends Component {
 								<span className="product-title-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
 								<div><img alt="" src="#" className="total-review-stars" /><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
 								<div className="customer-reviews-breakdown-bars">
-									<a href="##">
+									<a href="##">}
 										<div className="star-container">
 											<img alt="" src="/img/stars/5-star.svg" />
 										</div>
