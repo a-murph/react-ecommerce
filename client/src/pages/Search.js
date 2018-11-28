@@ -8,7 +8,8 @@ class Search extends Component {
 		searchTerm: "",
 		category: "",
 		results: [],
-		filteredResults: []
+		filteredResults: [],
+		sort: "best-match"
 	};
 
 	componentDidMount() {
@@ -26,7 +27,10 @@ class Search extends Component {
 					filteredResults: res.data
 				}, () => {
 					if (urlParams.get('o')) {
-						this.handleSort({target: {value: urlParams.get('o')}});
+						this.handleSort({ target: { value: urlParams.get('o') } });
+						this.setState({
+							sort: urlParams.get('o')
+						});
 					}
 				});
 			});
@@ -148,6 +152,9 @@ class Search extends Component {
 					filteredResults: sortedReviews
 				});
 				break;
+
+			default:
+				console.log("invalid sort");
 		}
 	};
 
@@ -168,10 +175,10 @@ class Search extends Component {
 					<div className="refine-results-sort-by-section">
 						<span className="search-body-font">Sort by</span>
 						<select onChange={this.handleSort} className="refine-results-drop-down search-body-font" name="sort-by">
-							<option value="best-match">Best Match</option>
-							<option value="low-high">Price: Low - High</option>
-							<option value="high-low">Price: High - Low</option>
-							<option value="review-count">Review Count</option>
+							<option selected={this.state.sort === "best-match" ? "selected" : ""} value="best-match">Best Match</option>
+							<option selected={this.state.sort === "low-high" ? "selected" : ""} value="low-high">Price: Low - High</option>
+							<option selected={this.state.sort === "high-low" ? "selected" : ""} value="high-low">Price: High - Low</option>
+							<option selected={this.state.sort === "review-count" ? "selected" : ""} value="review-count">Review Count</option>
 						</select>
 					</div>
 				</div>
