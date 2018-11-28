@@ -79,7 +79,7 @@ class Home extends Component {
 							<img alt="" className="more-to-discover-item-img" src="img/index/e.jpg" />
 							<span className="more-to-discover-text discover-font">ELECTRONICS</span>
 						</Link>
-						<Link className="more-to-discover-item" to="/search?s=&c=HealthandBeauty&o=low-high">
+						<Link className="more-to-discover-item" to="/search?s=&c=Health%20and%20Beauty&o=low-high">
 							<img alt="" className="more-to-discover-item-img" src="img/index/a.jpg" />
 							<span className="more-to-discover-text discover-font">HEALTH AND BEAUTY</span>
 						</Link>
