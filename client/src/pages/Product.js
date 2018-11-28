@@ -33,13 +33,13 @@ class Product extends Component {
 			});
 
 			API.search("", this.state.product.subcategory, true).then(res => {
+				let recoms = res.data.filter(product => product.name !== this.state.product.name)
 				this.setState({
-					recommended: res.data
+					recommended: recoms
 				});
 			});
 
 			let image = this.state.product.image.split(".");
-			console.log(image);
 			this.setState({
 				imageId: image[0]
 			});
