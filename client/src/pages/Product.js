@@ -26,6 +26,10 @@ class Product extends Component {
 		}
 	};
 
+	toggleModal = () => {
+		document.getElementById("comment-modal").classList.toggle("hidden");
+	};
+
 	componentDidMount() {
 		this.setState({
 			product: this.props.location.state.product
@@ -199,9 +203,19 @@ class Product extends Component {
 							<div className="write-a-review">
 								<span className="product-title-font">Review this Product</span>
 								<span className="product-body-font">Share your thoughts with other customers</span>
-								<button className="write-a-review-button" type="button">Write a Review</button>
+								<button onClick={this.toggleModal} className="write-a-review-button" type="button">Write a Review</button>
+							</div>
+
+							<div id="comment-modal" class="hidden">
+								<form onSubmit={this.handleForm}>
+									<input type="text" name="form-title" placeholder="Review Title"></input>
+									<input type="text" name="form-name" placeholder="Username"></input>
+									<textarea name="form-review" placeholder="Review Body"></textarea>
+									<input type="submit" value="Submit Review"></input>
+								</form>
 							</div>
 						</div>
+
 
 						<div className="reviews-section">
 							{this.state.product.reviews ?

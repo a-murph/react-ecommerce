@@ -1136,3 +1136,6 @@ a {
 .reviews-section .review:last-child {
   border-bottom: 1px solid lightgray;
 }
+.hidden {
+  display: none;
+}
