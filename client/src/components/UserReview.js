@@ -3,7 +3,7 @@ import React from "react";
 const UserReview = props => (
 	<div className="review">
 		<div className="review-header">
-			<div className="review-item"><span className="review-title-font">Review Title</span> <span className="review-body-font">{props.review.rating} out of 5 Stars </span> <i className="fas fa-check-circle"></i></div>
+			<div className="review-item"><span className="review-title-font">{props.review.title}</span> <span className="review-body-font">{props.review.rating} out of 5 Stars </span> <i className="fas fa-check-circle"></i></div>
 			<div className="review-item"><span className="review-italics-font">On {props.review.date}</span> <span className="review-italics-font">by {props.review.user}</span></div>
 			<div className="review-item"><span className="review-italics-font">Size: Medium </span><span className="review-italics-font">Color: White </span></div>
 		</div>
