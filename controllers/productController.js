@@ -5,7 +5,6 @@ module.exports = {
 		let s = req.query.s;
 		let c = req.query.c;
 		let sub = (req.query.sub === "true")
-		console.log(sub);
 
 		let query = {
 			"name": {
@@ -14,7 +13,6 @@ module.exports = {
 			}
 		};
 
-		console.log(c);
 		if (c !== "All") {
 			if (sub) {
 				query = {
@@ -60,40 +58,18 @@ module.exports = {
 	},
 	getProduct: function (req, res) {
 		id = req.params.id;
-		console.log(id);
 
 		db.Product
 			.findById(id)
 			.then(dbModel => res.json(dbModel))
-			.catch(err => res.status(422).json(err));
-	}
-};
-
-/*
-let c = req.query.c;
-		let query = {};
-
-		console.log(c);
-
-		if (c === "All") {
-			query = {
-				"$name": { "$regex": s, "$options": "i" }
-			};
-		} else {
-			query = {
-				"$and": [
-					{
-						"$name": { "$regex": s, "$options": "i" }
-					},
-					{
-						"$category": { "$regex": c, "$options": "i" }
-					},
-				]
-			};
-		}
-
-		console.log(query)
+			.catch(err => res.status(404).json(err));
+	},
+	postComment: function (req, res) {
+		id = req.params.id;
 
 		db.Product
-			.find(query)
-*/
+			.update({ _id: id }, { $push: { reviews: req.body } })
+			.then(dbModel => res.json(dbModel))
+			.catch(err => res.status(500).json(err));
+	}
+};

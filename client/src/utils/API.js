@@ -6,5 +6,8 @@ export default {
 	},
 	searchOne: (id) => {
 		return axios.get(`/api/product/${id}`);
-	}
+	},
+	postComment: (id, comment) => {
+		return axios.post(`/api/product/${id}`, comment);
+	},
 };

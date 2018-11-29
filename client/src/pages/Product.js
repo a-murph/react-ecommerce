@@ -30,6 +30,20 @@ class Product extends Component {
 		document.getElementById("comment-modal").classList.toggle("hidden");
 	};
 
+	handleForm = event => {
+		event.preventDefault();
+
+		let review = {
+			user: document.getElementById("form-name").value,
+			rating: document.getElementById("form-rating").value,
+			title: document.getElementById("form-title").value,
+			text: document.getElementById("form-review").value,
+			date: new Date(Date.now()).toLocaleDateString
+		};
+
+		API.postComment(this.state.product._id, review).then(response => {console.log(response)});
+	};
+
 	componentDidMount() {
 		this.setState({
 			product: this.props.location.state.product
@@ -206,11 +220,12 @@ class Product extends Component {
 								<button onClick={this.toggleModal} className="write-a-review-button" type="button">Write a Review</button>
 							</div>
 
-							<div id="comment-modal" class="hidden">
+							<div id="comment-modal" className="hidden">
 								<form onSubmit={this.handleForm}>
-									<input type="text" name="form-title" placeholder="Review Title"></input>
-									<input type="text" name="form-name" placeholder="Username"></input>
-									<textarea name="form-review" placeholder="Review Body"></textarea>
+									<input type="number" id="form-rating" placeholder="Stars" min={1} max={5}></input>
+									<input type="text" id="form-title" placeholder="Review Title"></input>
+									<input type="text" id="form-name" placeholder="Username"></input>
+									<textarea id="form-review" placeholder="Review Body"></textarea>
 									<input type="submit" value="Submit Review"></input>
 								</form>
 							</div>
