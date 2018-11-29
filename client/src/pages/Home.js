@@ -3,6 +3,12 @@ import {Link} from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 
 class Home extends Component {
+	handleSearch = (term, category) => {
+		if (term && term !== "") {
+			this.props.history.push(`/search?s=${term}&c=${category}`)
+		}
+	};
+
 	render() {
 		return (
 			<div className="container">
@@ -23,7 +29,7 @@ class Home extends Component {
 							<span className="nav-title-font">Login/Signup</span>
 						</div>
 					</div>
-					<SearchBar page="home" />
+					<SearchBar page="home" search={this.handleSearch} />
 					<div className="home-nav-account-dropdown">
 						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>
 					</div>

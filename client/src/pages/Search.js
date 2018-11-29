@@ -13,6 +13,12 @@ class Search extends Component {
 		brands: []
 	};
 
+	handleSearch = (term, category) => {
+		if (term && term !== "") {
+			this.props.history.push(`/search?s=${term}&c=${category}`)
+		}
+	};
+
 	componentDidMount() {
 		let urlParams = new URLSearchParams(window.location.search);
 		let s = urlParams.get('s');
@@ -179,7 +185,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div>
-				<NavBar />
+				<NavBar search={this.handleSearch} />
 
 				<div className="refine-results-bar">
 					<div className="refine-results-count">

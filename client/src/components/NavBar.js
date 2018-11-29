@@ -8,7 +8,7 @@ class NavBar extends Component {
 			<nav className="menu-bar">
 				<div className="nav-menu-button"><i className="fas fa-bars"></i></div>
 				<div className="nav-home-logo"><Link to="/"><img alt="" className="logo-nav" src="/img/logo3.svg"/></Link></div>
-				<SearchBar />
+				<SearchBar search={this.props.search} />
 				<div className="nav-language-dropdown"><span className="nav-title-font">EN</span><i className="fas fa-globe-americas nav-icon"></i></div>
 				<div className="nav-div-bar"></div>
 				<div className="nav-account-dropdown"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>

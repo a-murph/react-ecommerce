@@ -1,11 +1,9 @@
 import React, {Component} from "react";
-import {Redirect} from "react-router-dom"
 
 class SearchBar extends Component {
 	state = {
 		searchTerm: "",
 		category: "All",
-		redirect: false
 	};
 
 	handleSearchInput = event => {
@@ -22,16 +20,10 @@ class SearchBar extends Component {
 	};
 
 	handleSearch = () => {
-		if (this.state.searchTerm)
-			this.setState({
-				redirect: true
-			});
-	};
+		this.props.search(this.state.searchTerm, this.state.category);
+	}
 
 	render() {
-		if (this.state.redirect)
-			return <Redirect to={`/search?s=${this.state.searchTerm}&c=${this.state.category}`} />
-
 		if (this.props.page && this.props.page === "home")
 			return (
 				<div className="home-nav-search-bar">

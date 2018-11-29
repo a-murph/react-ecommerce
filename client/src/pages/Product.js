@@ -20,6 +20,12 @@ class Product extends Component {
 		imageId: 0
 	};
 
+	handleSearch = (term, category) => {
+		if (term && term !== "") {
+			this.props.history.push(`/search?s=${term}&c=${category}`)
+		}
+	};
+
 	componentDidMount() {
 		this.setState({
 			product: this.props.location.state.product
@@ -49,7 +55,7 @@ class Product extends Component {
 	render() {
 		return (
 			<div>
-				<NavBar />
+				<NavBar search={this.handleSearch} />
 
 				<main>
 					<div className="product-page-top-bar">
