@@ -88,7 +88,15 @@ class Product extends Component {
 
 					<div className="product-main">
 						<div className="product-main-display">
-							<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
+							<div>
+								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
+							</div>
+							<div>
+								<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.remove()}} />
+							</div>
+							<div>
+								<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.3.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.remove()}} />
+							</div>
 						</div>
 						<div className="product-main-info">
 							<div className="main-info-title">
