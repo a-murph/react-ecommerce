@@ -20,6 +20,7 @@ class Search extends Component {
 	};
 
 	componentDidMount() {
+		window.scrollTo(0,0);
 		let urlParams = new URLSearchParams(window.location.search);
 		let s = urlParams.get('s');
 		let c = urlParams.get('c');
