@@ -4,6 +4,7 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar";
 import UserReview from "../components/UserReview";
 import RecommendedItem from "../components/RecommendedItem";
+import axios from "axios";
 
 class Product extends Component {
 	state = {
@@ -17,7 +18,8 @@ class Product extends Component {
 			[0],
 			[0]
 		],
-		imageId: 0
+		imageId: 0,
+		images: 1
 	};
 
 	handleSearch = (term, category) => {
@@ -67,7 +69,19 @@ class Product extends Component {
 			let image = this.state.product.image.split(".");
 			this.setState({
 				imageId: image[0]
+			}, () => {
+				axios.get(`/${this.state.imageId}.2.jpeg`).then(() => {
+					this.setState({
+						images: this.state.images + 1
+					});
+				});
+				axios.get(`/${this.state.imageId}.3.jpeg`).then(() => {
+					this.setState({
+						images: this.state.images + 1
+					});
+				});
 			});
+
 		});
 	};
 
@@ -91,12 +105,16 @@ class Product extends Component {
 							<div>
 								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
 							</div>
-							<div>
-								<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.remove()}} />
-							</div>
-							<div>
-								<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.3.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.remove()}} />
-							</div>
+							{this.state.images >= 2 ? (
+								<div>
+									<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.2.jpeg`}/>
+								</div>
+							) : ""}
+							{this.state.images >= 3 ? (
+								<div>
+									<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.3.jpeg`}/>
+								</div>
+							) : ""}
 						</div>
 						<div className="product-main-info">
 							<div className="main-info-title">
