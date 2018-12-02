@@ -4,6 +4,7 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar";
 import UserReview from "../components/UserReview";
 import RecommendedItem from "../components/RecommendedItem";
+import ImgCarousel from "../components/Carousel";
 import axios from "axios";
 
 class Product extends Component {
@@ -19,7 +20,7 @@ class Product extends Component {
 			[0]
 		],
 		imageId: 0,
-		images: 1
+		images: []
 	};
 
 	handleSearch = (term, category) => {
@@ -66,21 +67,25 @@ class Product extends Component {
 				});
 			});
 
-			let image = this.state.product.image.split(".");
 			this.setState({
-				imageId: image[0]
+				images: [`/${[this.state.product.image]}`]
 			}, () => {
-				axios.get(`/${this.state.imageId}.2.jpeg`).then(() => {
-					this.setState({
-						images: this.state.images + 1
+				let image = this.state.product.image.split(".");
+				this.setState({
+					imageId: image[0]
+				}, () => {
+					axios.get(`/${this.state.imageId}.2.jpeg`).then(() => {
+						this.setState({
+							images: [...this.state.images, `/${this.state.imageId}.2.jpeg`]
+						});
+					});
+					axios.get(`/${this.state.imageId}.3.jpeg`).then(() => {
+						this.setState({
+							images: [...this.state.images, `/${this.state.imageId}.3.jpeg`]
+						});
 					});
 				});
-				axios.get(`/${this.state.imageId}.3.jpeg`).then(() => {
-					this.setState({
-						images: this.state.images + 1
-					});
-				});
-			});
+			})
 
 		});
 	};
@@ -101,7 +106,7 @@ class Product extends Component {
 					</div>
 
 					<div className="product-main">
-						<div className="product-main-display">
+						{/* <div className="product-main-display">
 							<div>
 								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
 							</div>
@@ -115,6 +120,9 @@ class Product extends Component {
 									<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.3.jpeg`}/>
 								</div>
 							) : ""}
+						</div> */}
+						<div className="product-main-display">
+							<ImgCarousel slideCount={1} images={this.state.images} />
 						</div>
 						<div className="product-main-info">
 							<div className="main-info-title">
