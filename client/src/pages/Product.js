@@ -132,23 +132,12 @@ class Product extends Component {
 					</div>
 
 					<div className="product-main">
-						{/* <div className="product-main-display">
-							<div>
-								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
-							</div>
-							{this.state.images >= 2 ? (
-								<div>
-									<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.2.jpeg`}/>
-								</div>
-							) : ""}
-							{this.state.images >= 3 ? (
-								<div>
-									<img alt="" className="product-main-display-img" src={`/${this.state.imageId}.3.jpeg`}/>
-								</div>
-							) : ""}
-						</div> */}
 						<div className="product-main-display">
-							<ImgCarousel type="image" slideCount={1} items={this.state.images} />
+							{this.state.images.length > 1 ? (
+								<ImgCarousel type="image" slideCount={1} items={this.state.images} />
+							) : (
+								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
+							)}
 						</div>
 						<div className="product-main-info">
 							<div className="main-info-title">
