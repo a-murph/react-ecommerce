@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom"
 
 const RecommendedItem = props => (
 	<div className="recommended-products-card">

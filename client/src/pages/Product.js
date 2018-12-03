@@ -148,7 +148,7 @@ class Product extends Component {
 							) : ""}
 						</div> */}
 						<div className="product-main-display">
-							<ImgCarousel slideCount={1} images={this.state.images} />
+							<ImgCarousel type="image" slideCount={1} items={this.state.images} />
 						</div>
 						<div className="product-main-info">
 							<div className="main-info-title">
@@ -204,10 +204,7 @@ class Product extends Component {
 					<div className="recommended-products">
 						<span className="product-title-font title">Customers Also Viewed These Products</span>
 						<div className="recommended-products-card-section">
-							{this.state.recommended.map((item, index) => {
-								if (index < 6)
-									return <RecommendedItem click={this.handleRecommendedLink} product={item} key={index} />
-							})}
+							<ImgCarousel type="item" items={this.state.recommended} slideCount={4} onClick={this.handleRecommendedLink} />
 						</div>
 					</div>
 
