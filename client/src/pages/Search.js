@@ -15,11 +15,12 @@ class Search extends Component {
 
 	handleSearch = (term, category) => {
 		if (term && term !== "") {
-			this.props.history.push(`/search?s=${term}&c=${category}`)
+			this.props.history.push(`/search?s=${term}&c=${category}`);
+			this.runSearch();
 		}
 	};
 
-	componentDidMount() {
+	runSearch = () => {
 		window.scrollTo(0,0);
 		let urlParams = new URLSearchParams(window.location.search);
 		let s = urlParams.get('s');
@@ -55,6 +56,10 @@ class Search extends Component {
 				});
 			});
 		});
+	};
+
+	componentDidMount() {
+		this.runSearch();
 	};
 
 	handleFilter = event => {
