@@ -11,8 +11,26 @@ class NavBar extends Component {
 				<SearchBar search={this.props.search} />
 				<div className="nav-language-dropdown"><span className="nav-title-font">EN</span><i className="fas fa-globe-americas nav-icon"></i></div>
 				<div className="nav-div-bar"></div>
-				<div className="nav-account-dropdown"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>
-				<div className="nav-orders-dropdown"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down nav-icon"></i></div>
+				<div className="nav-account-dropdown"><span className="nav-title-font">
+					<select>
+						<option>Account & Lists</option>
+						<option>Lorem</option>
+						<option>Ipsum</option>
+						<option>Dolor</option>
+						<option>Sit</option>
+						<option>Amet</option>
+					</select>
+				</span><i className="fas fa-sort-down nav-icon"></i></div>
+				<div className="nav-orders-dropdown"><span className="nav-title-font">
+					<select>
+						<option>Orders</option>
+						<option>Lorem</option>
+						<option>Ipsum</option>
+						<option>Dolor</option>
+						<option>Sit</option>
+						<option>Amet</option>
+					</select>
+				</span><i className="fas fa-sort-down nav-icon"></i></div>
 				<div className="nav-cart-button"><img alt="" className="img" src="/img/shopping-cart-solid.svg"/><span className="nav-title-font">Cart</span></div>
 			</nav>
 		);
