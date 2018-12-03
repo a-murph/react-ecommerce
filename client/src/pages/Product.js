@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import API from "../utils/API"
 import NavBar from "../components/NavBar";
 import UserReview from "../components/UserReview";
-import RecommendedItem from "../components/RecommendedItem";
 import ImgCarousel from "../components/Carousel";
 import axios from "axios";
 
