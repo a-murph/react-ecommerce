@@ -135,8 +135,8 @@ class Product extends Component {
 							</div>
 
 							<div className="main-info-price">
-									<div><span className="product-body-font">List Price:</span> <span className="product-body-font">${this.state.product.price}</span></div>
-									<div><span className="product-body-font">Price:</span> <span className="product-body-font">${this.state.product.price}</span> <span className="product-bold-font">& FREE Shipping</span></div>
+									<div><span className="product-body-font">List Price:</span> <span className="product-body-font">${this.state.product.price ? this.state.product.price.toFixed(2) : "" }</span></div>
+									<div><span className="product-body-font">Price:</span> <span className="product-body-font">${this.state.product.price ? this.state.product.price.toFixed(2) : "" }</span> <span className="product-bold-font">& FREE Shipping</span></div>
 									<div><span className="product-body-font">You Save:</span> <span className="product-body-font">$0.00 (0%)</span></div>
 							</div>
 
