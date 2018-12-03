@@ -47,10 +47,32 @@ class Product extends Component {
 		API.postComment(this.state.product._id, review).then(response => {console.log(response)});
 	};
 
-	componentDidMount() {
+	handleRecommendedLink = event => {
+		this.props.history.push(`/product/${event.target.dataset.product}`);
+		this.getProduct(this.setProduct);
+	};
+
+	getProduct = cb => {
+		let id = "";
+		if (this.props.location.state)
+			id = this.props.location.state.product;
+		else
+			id = window.location.href.split("/")[4];
+
+		if (typeof id === "string") {
+			API.searchOne(id).then(res => {
+				cb(res.data)
+			})
+		} else {
+			cb(id);
+		}
+	}
+
+	setProduct = (product) => {
 		window.scrollTo(0,0);
+
 		this.setState({
-			product: this.props.location.state.product
+			product: product
 		}, () => {
 			this.state.product.reviews.forEach(review => {
 				let scores = this.state.ratings;
@@ -88,6 +110,10 @@ class Product extends Component {
 			})
 
 		});
+	};
+
+	componentDidMount() {
+		this.getProduct(this.setProduct);
 	};
 
 	render() {
@@ -180,7 +206,7 @@ class Product extends Component {
 						<div className="recommended-products-card-section">
 							{this.state.recommended.map((item, index) => {
 								if (index < 6)
-									return <RecommendedItem product={item} key={index} />
+									return <RecommendedItem click={this.handleRecommendedLink} product={item} key={index} />
 							})}
 						</div>
 					</div>
