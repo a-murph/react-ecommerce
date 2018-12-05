@@ -26,22 +26,20 @@ class Dropdown extends Component {
 
 	componentDidMount() {
 		this.setState({
-			current: "All"
+			current: this.props.default
 		});
 	};
 
 	render() {
 		return (
-			<div className="dropdown">
-				<div id="dropdown-selection" onClick={this.showDropdown}>
+			<div className="dropdown" onMouseEnter={this.props.mouseType === "hover" ? this.showDropdown : ""} onMouseLeave={this.props.mouseType === "hover" ? this.showDropdown : ""}>
+				<div id="dropdown-selection" onClick={this.props.mouseType !== "hover" ? this.showDropdown : ""}>
 					{this.state.current}
 				</div>
 				<div id="dropdown-options" className="dropdown-content hidden">
-					<div onClick={this.changeSelection}>Electronics</div>
-					<div onClick={this.changeSelection}>Media</div>
-					<div onClick={this.changeSelection}>Clothing</div>
-					<div onClick={this.changeSelection}>Health & Beauty</div>
-					<div onClick={this.changeSelection}>Home</div>
+					{this.props.options.map((option, index) => {
+						return <div key={index} onClick={this.changeSelection}>{option}</div>
+					})}
 				</div>
 			</div>
 		);
