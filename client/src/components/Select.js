@@ -25,7 +25,7 @@ class Select extends Component {
 			this.props.handleChange({
 				target: {
 					name: "dropdown",
-					value: event.target.textContent
+					value: this.state.current
 				}
 			});
 		});
