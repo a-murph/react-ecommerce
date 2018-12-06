@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import SearchBar from "../components/SearchBar";
+import Dropdown from "../components/Dropdown";
 
 class Home extends Component {
 	handleSearch = (term, category) => {
@@ -34,12 +35,8 @@ class Home extends Component {
 						</div>
 					</div>
 					<SearchBar page="home" search={this.handleSearch} />
-					<div className="home-nav-account-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Account & Lists</span><i className="fas fa-sort-down nav-icon"></i></div>
-					</div>
-					<div className="home-nav-orders-dropdown">
-						<div className="bottom-container"><span className="nav-title-font">Orders</span><i className="fas fa-sort-down nav-icon"></i></div>
-					</div>
+					<Dropdown title="Account & Lists" list={["Lorem", "Ipsum", "Dolor", "Sit", "Amet"]} />
+					<Dropdown title="Orders" list={["Lorem", "Ipsum", "Dolor", "Sit", "Amet"]} />
 					<div className="home-nav-cart-button">
 						<img alt="" className="img" src="img/shopping-cart-solid.svg"/>
 						<span className="nav-title-font">Cart</span>
