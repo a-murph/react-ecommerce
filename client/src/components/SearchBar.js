@@ -13,9 +13,10 @@ class SearchBar extends Component {
 				searchTerm: event.target.value
 			});
 		} else if (event.target.name === "dropdown") {
+			console.log("in if")
 			this.setState({
 				category: event.target.value
-			});
+			}, () => {console.log(this.state.category)});
 		}
 	};
 
