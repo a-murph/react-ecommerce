@@ -6,7 +6,7 @@ const RecommendedItem = props => (
 		<div className="card-text">
 			<span className="product-bold-font">{props.product.name}</span> <br></br>
 			<span className="product-body-font">{props.product.brand}</span> <br></br>
-			<div><img alt="" className="" src={`/img/stars/${props.product.rating}-star.svg`}/><span className="product-body-font">({props.product.reviews.length})</span></div>
+			<div><img alt="" className="card-text-stars" src={`/img/stars/${props.product.rating}-star.svg`}/><span className="product-body-font">({props.product.reviews.length})</span></div>
 			<span className="product-body-font">${props.product.price}</span>
 		</div>
 	</div>

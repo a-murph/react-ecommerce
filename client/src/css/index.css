@@ -355,15 +355,57 @@ table {
   background-color: white;
   border-radius: 2px;
   display: flex;
+  /*
+        .home-nav-search-filter-button{
+            width: 8%;
+            height: 100%;
+            border-radius: 2px 0px 0px 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        */
+  /* The container <div> - needed to position the dropdown content */
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */
+  /* Change the background color of the dropdown button when the dropdown content is shown */
 }
-.home-menu-bar .home-nav-search-bar .home-nav-search-filter-button {
-  width: 8%;
-  height: 100%;
-  background-color: #f3f3f3;
-  border-radius: 2px 0px 0px 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.home-menu-bar .home-nav-search-bar .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.home-menu-bar .home-nav-search-bar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.home-menu-bar .home-nav-search-bar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.home-menu-bar .home-nav-search-bar .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.home-menu-bar .home-nav-search-bar .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.home-menu-bar .home-nav-search-bar .dropdown:hover .dropdown-content {
+  display: block;
+}
+.home-menu-bar .home-nav-search-bar .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-text-input {
   width: 88%;
@@ -974,25 +1016,34 @@ a {
   display: flex;
   justify-content: space-evenly;
 }
-.recommended-products .recommended-products-card-section .recommended-products-card-anchor {
-  width: 15%;
-  height: 100%;
+.recommended-products .recommended-products-card-section .slider-frame {
+  height: 100% !important;
 }
-.recommended-products .recommended-products-card-section .recommended-products-card-anchor .recommended-products-card {
+.recommended-products .recommended-products-card-section .slider-frame .slider-list {
+  height: 100% !important;
+}
+.recommended-products .recommended-products-card-section .slider-frame .slider-list .slider-slide {
+  height: 100% !important;
+}
+.recommended-products .recommended-products-card-section .recommended-products-card {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.recommended-products .recommended-products-card-section .recommended-products-card-anchor .recommended-products-card .card-img {
+.recommended-products .recommended-products-card-section .recommended-products-card .card-img {
   height: 288px;
   width: 100%;
+  object-fit: cover;
 }
-.recommended-products .recommended-products-card-section .recommended-products-card-anchor .recommended-products-card .card-text {
+.recommended-products .recommended-products-card-section .recommended-products-card .card-text {
   width: 100%;
   height: 276px;
   box-sizing: border-box;
   padding: 5%;
+}
+.recommended-products .recommended-products-card-section .recommended-products-card .card-text .card-text-stars {
+  width: 100px;
 }
 /*CUSTOMER REVIEW SECTION*/
 .customer-reviews {
@@ -1033,6 +1084,9 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.customer-reviews-bar .reviews-summary .customer-reviews-breakdown-bars a .star-container img {
+  width: 100%;
 }
 .customer-reviews-bar .reviews-summary .customer-reviews-breakdown-bars a .star-container .fa-star {
   color: #212d30;
