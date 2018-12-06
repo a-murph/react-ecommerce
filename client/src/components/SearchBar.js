@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Select from "./Select";
 
 class SearchBar extends Component {
 	state = {
@@ -12,7 +13,6 @@ class SearchBar extends Component {
 				searchTerm: event.target.value
 			});
 		} else if (event.target.name === "dropdown") {
-			console.log("in if")
 			this.setState({
 				category: event.target.value
 			});
@@ -27,7 +27,8 @@ class SearchBar extends Component {
 		if (this.props.page && this.props.page === "home")
 			return (
 				<div className="home-nav-search-bar">
-					<div className="home-nav-search-filter-button">
+
+					{/* <div className="home-nav-search-filter-button">
 						<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark">
 							<option>All</option>
 							<option>Electronics</option>
@@ -36,7 +37,10 @@ class SearchBar extends Component {
 							<option>Home</option>
 							<option>Media</option>
 						</select>
-					</div>
+					</div> */}
+
+					<Select handleChange={this.handleSearchInput} options={["Electronics", "Clothing", "Home", "Health and Beauty", "Media"]} default="All" />
+
 					<input type="text" name="search-bar" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={event => { if (event.key && event.key === "Enter") this.handleSearch() }}></input>
 					<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input><i className="fas fa-search icon"></i></div>
 				</div>
@@ -44,16 +48,20 @@ class SearchBar extends Component {
 
 		return (
 			<div className="nav-search-bar">
-				<div className="nav-search-filter-button">
-					<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark">
-						<option>All</option>
-						<option>Electronics</option>
-						<option>Clothing</option>
-						<option>Health and Beauty</option>
-						<option>Home</option>
-						<option>Media</option>
+
+				{/* <div className="dropdown">
+					<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark drop-button">
+						<option className="drop-content">All</option>
+						<option className="drop-content">Electronics</option>
+						<option className="drop-content">Clothing</option>
+						<option className="drop-content">Health and Beauty</option>
+						<option className="drop-content">Home</option>
+						<option className="drop-content">Media</option>
 					</select>
-				</div>
+				</div> */}
+
+				<Select handleChange={this.handleSearchInput} options={["Electronics", "Clothing", "Home", "Health & Beauty", "Media"]} default="All" />
+
 				<input type="text" name="search-bar" className="nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={event => { if (event.key && event.key === "Enter") this.handleSearch() }}></input>
 				<div className="nav-search-submit-button"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input><i className="fas fa-search icon"></i></div>
 			</div>
