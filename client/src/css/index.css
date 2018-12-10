@@ -1203,6 +1203,9 @@ a {
   flex-direction: column;
   padding: 2% 0px 2% 0px;
 }
+.reviews-section .review .review-header img {
+  height: 15px;
+}
 .reviews-section .review .review-body {
   width: 100%;
   display: flex;
