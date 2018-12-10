@@ -1387,7 +1387,7 @@ const productSeed = [
 			category: "Electronics",
 			subcategory: "Desktop Computers",
 			description: "We aim to show you accurate product information. Manufacturers, suppliers and others provide what you see here, and we have not verified it.Processor: AMD FX-6300 Vishera 6-Core 3.5 GHz / 4.1 GHz Turbo UnlockedMotherboard: AM3+ 970 Chipset Gaming Motherboard (Not generic motherboard where other gaming companies will cut corners on)Graphics: Nvidia Geforce GTX 1050 TI 4GB Pascal EngineMemory: High Performance 8GB DDR3 1866 MHz Gaming Memory with Heat Spreader (We do not use generic memory that other companies will cut corners on)Hard Disk: 1TB 7200 RPM Hard DrivePower Supply: 430 Watts High Performance Power SupplyOperating System: Windows 10 Professional 64-bitNow you can turn your PC into a powerful gaming rig! With the newest technology from Nvidia GTX 1050 Ti, SkyTech PC provides you the newest and improved version of the Pascal architecture at a budget. Redeem your confidence while you raise your gaming experience and praise our SkyTech PC. The Skytech ArchAngel 1050 Ti offers a fast and powerful performance that all gamers will love.SkyTech ArchAngel Gamers 1050 Ti uses AMD FX-6300 Processor that is fast and reliable. You won’t know what’s fast until you get your hands on one of these! SkyTech believes in FAST, RELIABILITY, QUALITY, and AFFORDABILITY! Unlike other gaming PC out in the market that sacrifice quality for price, Skytech does not compromise and only use quality & branded components such as higher grade power supply, gaming memory with heat spreader, and more!** SkyTech PC uses only the best and branded components to ensure that your computer is reliable and durable.**SkyTech PC power supplies have a 5 year warranty.** SkyTech PC ONLY uses High Performance GAMING Memory for your PC.Processor: AMD FX-6300 Vishera 6-Core 3.5 GHz / 4.1 GHz Turbo Unlocked Motherboard:AM3+ 970 Chipset Gaming Motherboard Graphics: Geforce GTX 1050 TI 4GB Memory: 8GB DDR3 1866 MHz Gaming Memory Hard Disk: 1TB 7200 RPM Hard Drive Power Supply: 430 Watts Operating System: Win10 Prol 64-bit",
-			rating: 2.1,
+			rating: 2.5,
 			reviews : [
 				{user: "Duis", rating: 2, title: "Aenean non luctus", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu tellus sodales, tincidunt nisl molestie, faucibus ipsum. Phasellus congue lobortis massa et accumsan. Vivamus convallis nisi id dolor blandit iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent sit amet nisl nisi. Aenean non luctus tortor. Fusce id efficitur metus, id facilisis nunc. Nulla in gravida metus, in consequat lectus. Proin eu vehicula lorem, at posuere ligula. In accumsan posuere justo, eu feugiat nibh accumsan commodo. Mauris tincidunt interdum mi a pellentesque. ", date: "September 10, 2018",},
 				{user: "convallis",rating: 5,title: "Vestibulum dui diam",text: "Donec pulvinar massa a nisl gravida, sit amet ornare enim cursus. Ut facilisis dui sodales erat laoreet, vitae vulputate metus vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras neque libero, vulputate non faucibus in, condimentum ut dui. Vestibulum dui diam, vestibulum ac ante sit amet, convallis finibus leo. Phasellus venenatis sapien efficitur, maximus odio nec, viverra orci. In porta, est at ornare suscipit, mi enim imperdiet nisl, quis porta orci nulla sed enim. Morbi at risus luctus, lacinia nibh et, condimentum diam. Donec erat dui, dictum sed nisi vitae, rutrum ornare neque. Cras nec finibus orci, in sagittis eros. ",date: "November 1, 2018",},
@@ -4803,6 +4803,7 @@ const productSeed = [
 			brand: "Dove",
 			shipping: "2-day Shipping",
 			listprice: 8.94,
+			price: 8.94,
 			image: "img/product/HealthandBeauty/BathandBody/1.1.jpeg",
 			category: "Health and Beauty",
 			subcategory: "Bath and Body",
@@ -4928,6 +4929,7 @@ const productSeed = [
 			brand: "Caress",
 			shipping: "Standard Shipping",
 			listprice: 6.99,
+			price: 6.99,
 			image: "img/product/HealthandBeauty/BathandBody/7.1.jpeg",
 			category: "Health and Beauty",
 			subcategory: "Bath and Body",
@@ -6119,7 +6121,7 @@ const productSeed = [
 			category: "Health and Beauty",
 			subcategory: "Wellness",
 			description: "We aim to show you accurate product information. Manufacturers, suppliers and others provide what you see here, and we have not verified it. The mix of Argan, Hemp and Jojoba oils will revitalise and nourish your beard, leaving it soft and tamed, whilst Vitamin E helps to protect and soothe your skin. Description: The mix of Argan, Hemp and Jojoba oils will revitalise and nourish your beard, leaving it soft and tamed, whilst Vitamin E helps to protect and soothe your skin.",
-			rating: 2.1,
+			rating: 2.5,
 			reviews : [
 				{user: "Duis", rating: 2, title: "Aenean non luctus", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu tellus sodales, tincidunt nisl molestie, faucibus ipsum. Phasellus congue lobortis massa et accumsan. Vivamus convallis nisi id dolor blandit iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent sit amet nisl nisi. Aenean non luctus tortor. Fusce id efficitur metus, id facilisis nunc. Nulla in gravida metus, in consequat lectus. Proin eu vehicula lorem, at posuere ligula. In accumsan posuere justo, eu feugiat nibh accumsan commodo. Mauris tincidunt interdum mi a pellentesque. ", date: "September 10, 2018",},
 				{user: "convallis",rating: 5,title: "Vestibulum dui diam",text: "Donec pulvinar massa a nisl gravida, sit amet ornare enim cursus. Ut facilisis dui sodales erat laoreet, vitae vulputate metus vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras neque libero, vulputate non faucibus in, condimentum ut dui. Vestibulum dui diam, vestibulum ac ante sit amet, convallis finibus leo. Phasellus venenatis sapien efficitur, maximus odio nec, viverra orci. In porta, est at ornare suscipit, mi enim imperdiet nisl, quis porta orci nulla sed enim. Morbi at risus luctus, lacinia nibh et, condimentum diam. Donec erat dui, dictum sed nisi vitae, rutrum ornare neque. Cras nec finibus orci, in sagittis eros. ",date: "November 1, 2018",},
