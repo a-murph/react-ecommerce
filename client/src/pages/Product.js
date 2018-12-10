@@ -133,7 +133,7 @@ class Product extends Component {
 					<div className="product-main">
 						<div className="product-main-display">
 							{this.state.images.length > 1 ? (
-								<ImgCarousel type="image" slideCount={1} items={this.state.images} />
+								<ImgCarousel className="carousel-center" type="image" slideCount={1} items={this.state.images} />
 							) : (
 								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
 							)}

@@ -27,7 +27,7 @@ class SearchBar extends Component {
 	render() {
 		if (this.props.page && this.props.page === "home")
 			return (
-				<div className="home-nav-search-bar">
+				<div className="home-nav-search-bar home-nav-font-dark">
 
 					{/* <div className="home-nav-search-filter-button">
 						<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark">
@@ -43,12 +43,12 @@ class SearchBar extends Component {
 					<Select handleChange={this.handleSearchInput} options={["Electronics", "Clothing", "Home", "Health and Beauty", "Media"]} default="All" />
 
 					<input type="text" name="search-bar" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={event => { if (event.key && event.key === "Enter") this.handleSearch() }}></input>
-					<div className="home-nav-search-submit-button"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input><i className="fas fa-search icon"></i></div>
+					<div className="home-nav-search-submit-button pointer"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input><i className="fas fa-search icon"></i></div>
 				</div>
 			);
 
 		return (
-			<div className="nav-search-bar">
+			<div className="nav-search-bar nav-font-dark">
 
 				{/* <div className="dropdown">
 					<select onChange={this.handleSearchInput} name="dropdown" className="nav-font-dark drop-button">
@@ -61,10 +61,13 @@ class SearchBar extends Component {
 					</select>
 				</div> */}
 
-				<Select handleChange={this.handleSearchInput} options={["Electronics", "Clothing", "Home", "Health & Beauty", "Media"]} default="All" />
+				<div className="nav-search-filter-button">
+					<Select handleChange={this.handleSearchInput} options={["Electronics", "Clothing", "Home", "Health & Beauty", "Media"]} default="All" />
+				</div>
 
 				<input type="text" name="search-bar" className="nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={event => { if (event.key && event.key === "Enter") this.handleSearch() }}></input>
-				<div className="nav-search-submit-button"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input><i className="fas fa-search icon"></i></div>
+				<input type="submit" className="nav-search-submit-button pointer icon" value="" onClick={this.handleSearch}></input>
+				{/*<i className="fas fa-search icon"></i>*/}
 			</div>
 		);
 	};

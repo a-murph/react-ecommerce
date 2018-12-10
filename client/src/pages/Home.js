@@ -30,14 +30,14 @@ class Home extends Component {
 				<nav className="home-menu-bar">
 					<div className="home-nav-menu-container">
 						<div className="text-container">
-							<div className="home-nav-menu-button"><i className="fas fa-bars"></i></div>
-							<span className="nav-title-font">Login/Signup</span>
+							<div className="home-nav-menu-button pointer"><i className="fas fa-bars"></i></div>
+							<span className="nav-title-font pointer">Login/Signup</span>
 						</div>
 					</div>
 					<SearchBar page="home" search={this.handleSearch} />
 					<Dropdown title="Account & Lists" list={["Lorem", "Ipsum", "Dolor", "Sit", "Amet"]} />
 					<Dropdown title="Orders" list={["Lorem", "Ipsum", "Dolor", "Sit", "Amet"]} />
-					<div className="home-nav-cart-button">
+					<div className="home-nav-cart-button pointer">
 						<img alt="" className="img" src="img/shopping-cart-solid.svg"/>
 						<span className="nav-title-font">Cart</span>
 					</div>

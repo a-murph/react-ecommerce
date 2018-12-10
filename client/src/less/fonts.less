@@ -1,3 +1,14 @@
+/*DONT ALLOW FONT TO BE SELECTED*/
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
 /*MAIN FONTS*/
 
 .logo-font{    
@@ -33,6 +44,7 @@
     font-size: 1.0rem;
     font-weight: bold;
     color: @tertiary-color;
+    text-decoration: none;
 }
 
 .home-nav-font-dark{
