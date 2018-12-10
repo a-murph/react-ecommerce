@@ -68,12 +68,13 @@
                 width: 150px;
                 background-color: @main-color;
                 position: absolute;
-                top: 208px;
-                left: 322px;
+                top: 207px;
+                left: 24.7vw;
                 box-sizing: border-box;
                 padding: 15px 10px 15px 10px;
                 border-radius: 0px 0px 3px 3px;
-                cursor: pointer;
+				cursor: pointer;
+				z-index: 3;
 
                 div{
                     margin-bottom: 10px;
@@ -123,7 +124,9 @@
         width: 100px;
         box-sizing: border-box;
         padding: 10px;
-        border-radius: 0px 0px 3px 3px;
+		border-radius: 0px 0px 3px 3px;
+		z-index: 3;
+
         div{
             margin-bottom: 8px;
             cursor: pointer;
@@ -198,32 +201,32 @@
         display: flex;
 
         .nav-search-filter-button{
-            width: 6%;
+            width: max-content;
             height: 100%;
             background-color: @main-color;
             border-radius: 2px 0px 0px 2px;
             display: flex;
             align-items: center;
             justify-content: center;
+		}
 
-        }
         .dropdown{
-            width: 100px;
-            height: 200px;
+			width: max-content;
+			padding: 0px 10px;
             background-color: @main-color;
             border-radius: 2px 0px 0px 2px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+			justify-content: center;
+			cursor: pointer;
 
             .dropdown-content{
                 width: 150px;
-                height: 200px;
                 background-color: @main-color;
                 position: absolute;
-                top: 66px;
-                left: 53px;
+                top: 44px;
+                left: 16.6vw;
                 box-sizing: border-box;
                 padding: 10px;
                 border-radius: 0px 0px 3px 3px;
@@ -252,6 +255,24 @@
             justify-content: center;
             border: none;
 
+        }
+	}
+
+	.dropdown-box{
+        position: absolute;
+        top: 40px;
+        background-color: @secondary-color;
+        width: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 0px 0px 3px 3px;
+        div{
+            margin-bottom: 8px;
+            cursor: pointer;
+
+            a{
+                color: @tertiary-color;
+            }
         }
     }
 

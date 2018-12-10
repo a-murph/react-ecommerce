@@ -394,12 +394,13 @@ table {
   width: 150px;
   background-color: #f3f3f3;
   position: absolute;
-  top: 208px;
-  left: 322px;
+  top: 207px;
+  left: 24.7vw;
   box-sizing: border-box;
   padding: 15px 10px 15px 10px;
   border-radius: 0px 0px 3px 3px;
   cursor: pointer;
+  z-index: 3;
 }
 .home-menu-bar .home-nav-search-bar .dropdown .dropdown-content div {
   margin-bottom: 10px;
@@ -442,6 +443,7 @@ table {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 0px 0px 3px 3px;
+  z-index: 3;
 }
 .home-menu-bar .dropdown-box div {
   margin-bottom: 8px;
@@ -505,7 +507,7 @@ table {
   display: flex;
 }
 .menu-bar .nav-search-bar .nav-search-filter-button {
-  width: 6%;
+  width: max-content;
   height: 100%;
   background-color: #f3f3f3;
   border-radius: 2px 0px 0px 2px;
@@ -514,22 +516,22 @@ table {
   justify-content: center;
 }
 .menu-bar .nav-search-bar .dropdown {
-  width: 100px;
-  height: 200px;
+  width: max-content;
+  padding: 0px 10px;
   background-color: #f3f3f3;
   border-radius: 2px 0px 0px 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .menu-bar .nav-search-bar .dropdown .dropdown-content {
   width: 150px;
-  height: 200px;
   background-color: #f3f3f3;
   position: absolute;
-  top: 66px;
-  left: 53px;
+  top: 44px;
+  left: 16.6vw;
   box-sizing: border-box;
   padding: 10px;
   border-radius: 0px 0px 3px 3px;
@@ -553,6 +555,22 @@ table {
   align-items: center;
   justify-content: center;
   border: none;
+}
+.menu-bar .dropdown-box {
+  position: absolute;
+  top: 40px;
+  background-color: #212d30;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 0px 0px 3px 3px;
+}
+.menu-bar .dropdown-box div {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.menu-bar .dropdown-box div a {
+  color: white;
 }
 .menu-bar .nav-language-dropdown {
   width: 4%;
