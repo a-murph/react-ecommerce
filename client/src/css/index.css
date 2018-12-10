@@ -398,8 +398,6 @@ table {
   left: 322px;
   box-sizing: border-box;
   padding: 15px 10px 15px 10px;
-  display: flex;
-  flex-direction: column;
   border-radius: 0px 0px 3px 3px;
   cursor: pointer;
 }
@@ -534,22 +532,19 @@ table {
   left: 53px;
   box-sizing: border-box;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border-radius: 0px 0px 3px 3px;
   cursor: pointer;
 }
 .menu-bar .nav-search-bar .dropdown .dropdown-content div {
   margin-bottom: 5px;
 }
-.menu-bar .nav-search-bar .dropdown .nav-search-text-input {
+.menu-bar .nav-search-bar .nav-search-text-input {
   width: 88%;
   height: 32px;
   background-color: white;
   border: none;
 }
-.menu-bar .nav-search-bar .dropdown .nav-search-submit-button {
+.menu-bar .nav-search-bar .nav-search-submit-button {
   width: 6%;
   height: 100%;
   background-color: #f3f3f3;
@@ -559,40 +554,40 @@ table {
   justify-content: center;
   border: none;
 }
-.menu-bar .nav-search-bar .nav-language-dropdown {
+.menu-bar .nav-language-dropdown {
   width: 4%;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu-bar .nav-search-bar .nav-div-bar {
+.menu-bar .nav-div-bar {
   width: 0px;
   height: 30px;
   border-left: 1px solid white;
 }
-.menu-bar .nav-search-bar .nav-account-dropdown {
+.menu-bar .nav-account-dropdown {
   width: 10%;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu-bar .nav-search-bar .nav-orders-dropdown {
+.menu-bar .nav-orders-dropdown {
   width: 6%;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu-bar .nav-search-bar .nav-cart-button {
+.menu-bar .nav-cart-button {
   width: 6%;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu-bar .nav-search-bar .nav-cart-button .img {
+.menu-bar .nav-cart-button .img {
   height: 25px;
   margin-right: 5px;
 }
