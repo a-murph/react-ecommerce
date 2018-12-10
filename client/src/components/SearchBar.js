@@ -43,7 +43,7 @@ class SearchBar extends Component {
 					<Select handleChange={this.handleSearchInput} options={["Electronics", "Clothing", "Home", "Health and Beauty", "Media"]} default="All" />
 
 					<input type="text" name="search-bar" className="home-nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={event => { if (event.key && event.key === "Enter") this.handleSearch() }}></input>
-					<div className="home-nav-search-submit-button pointer"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input><i className="fas fa-search icon"></i></div>
+					<div className="home-nav-search-submit-button pointer"><input type="submit" className="icon" value="" onClick={this.handleSearch}></input></div>
 				</div>
 			);
 
@@ -66,7 +66,7 @@ class SearchBar extends Component {
 				</div>
 
 				<input type="text" name="search-bar" className="nav-search-text-input" onChange={this.handleSearchInput} onKeyPress={event => { if (event.key && event.key === "Enter") this.handleSearch() }}></input>
-				<input type="submit" className="nav-search-submit-button pointer icon" value="" onClick={this.handleSearch}></input>
+				<input type="submit" className="nav-search-submit-button pointer" value="" onClick={this.handleSearch}></input>
 				{/*<i className="fas fa-search icon"></i>*/}
 			</div>
 		);

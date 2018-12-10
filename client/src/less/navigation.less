@@ -54,7 +54,8 @@
         display: flex;
 
         .dropdown{
-            width: 8%;
+            width: max-content;
+			padding: 0px 10px;
             height: 100%;
             background-color: @main-color;
             border-radius: 2px 0px 0px 2px;
@@ -110,9 +111,13 @@
             }
 
             .icon{
-                position: relative;
-                right: 8px;
-                color: @secondary-color;
+				color: @secondary-color;
+				cursor: pointer;
+				height: 100%;
+				width: 100%;
+				background-image: url("/img/search.svg");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
             }
         }
     }
@@ -242,11 +247,12 @@
             width: 88%;
             height: 32px;
             background-color: @tertiary-color;
-            border: none;
+			border: none;
+			padding-left: 10px;
         }
 
         .nav-search-submit-button{
-            width: 6%;
+            width: 8%;
             height: 100%;
             background-color: @main-color;
             border-radius: 0px 2px 2px 0px;
@@ -254,7 +260,9 @@
             align-items: center;
             justify-content: center;
             border: none;
-
+			background-image: url("/img/search.svg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
         }
 	}
 

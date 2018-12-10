@@ -380,7 +380,8 @@ table {
   display: flex;
 }
 .home-menu-bar .home-nav-search-bar .dropdown {
-  width: 8%;
+  width: max-content;
+  padding: 0px 10px;
   height: 100%;
   background-color: #f3f3f3;
   border-radius: 2px 0px 0px 2px;
@@ -431,9 +432,13 @@ table {
   background-color: rgba(0, 0, 0, 0);
 }
 .home-menu-bar .home-nav-search-bar .home-nav-search-submit-button .icon {
-  position: relative;
-  right: 8px;
   color: #212d30;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/search.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .home-menu-bar .dropdown-box {
   position: absolute;
@@ -545,9 +550,10 @@ table {
   height: 32px;
   background-color: white;
   border: none;
+  padding-left: 10px;
 }
 .menu-bar .nav-search-bar .nav-search-submit-button {
-  width: 6%;
+  width: 8%;
   height: 100%;
   background-color: #f3f3f3;
   border-radius: 0px 2px 2px 0px;
@@ -555,6 +561,9 @@ table {
   align-items: center;
   justify-content: center;
   border: none;
+  background-image: url("/img/search.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .menu-bar .dropdown-box {
   position: absolute;
