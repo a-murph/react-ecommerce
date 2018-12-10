@@ -10,7 +10,8 @@ class Search extends Component {
 		results: [],
 		filteredResults: [],
 		sort: "best-match",
-		brands: []
+		brands: [],
+		loaded: false
 	};
 
 	handleSearch = (term, category) => {
@@ -34,7 +35,8 @@ class Search extends Component {
 			API.search(this.state.searchTerm, this.state.category, sub).then(res => {
 				this.setState({
 					results: res.data,
-					filteredResults: res.data
+					filteredResults: res.data,
+					loaded: true
 				}, () => {
 					if (urlParams.get('o')) {
 						this.handleSort({ target: { value: urlParams.get('o') } });
@@ -196,11 +198,13 @@ class Search extends Component {
 				<div className="refine-results-bar">
 					<div className="refine-results-count">
 						{
-							this.state.filteredResults.length !== 0 ?
-								<span className="search-body-font">1 - {this.state.filteredResults.length} of {this.state.filteredResults.length}</span>
-							: <span className="search-body-font">0</span>
+							this.state.filteredResults.length > 0 ? (
+								<div>
+									<span className="search-body-font">{this.state.filteredResults.length}</span>
+									<span className="search-body-font"> results in </span><span className="search-body-font">{this.state.category === "All" ? "All Categories for " : `${this.state.category} for `}</span><span className="search-body-font">"{this.state.searchTerm}"</span>
+								</div>
+							) : "Loading..."
 						}
-						<span className="search-body-font"> results in </span><span className="search-body-font">All Categories: </span><span className="search-body-font">"{this.state.searchTerm}"</span>
 					</div>
 					<div className="refine-results-sort-by-section">
 						<span className="search-body-font">Sort by</span>
@@ -273,10 +277,14 @@ class Search extends Component {
 					</div>
 
 					<div className="search-results-display">
-						{
-							this.state.filteredResults.map((product, index) => {
-								return <SearchResult key={index} product={product} />
-							})
+						{ this.state.loaded ?
+							(
+								this.state.filteredResults.length > 0 ? (
+									this.state.filteredResults.map((product, index) => {
+										return <SearchResult key={index} product={product} />
+									})
+								) : "No results to display."
+							) : "Loading..."
 						}
 					</div>
 				</main>
