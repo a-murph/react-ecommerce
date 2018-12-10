@@ -54,7 +54,7 @@ class Search extends Component {
 					newBrands.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 					this.setState({
 						brands: newBrands
-					}, () => {console.log(this.state.brands)});
+					});
 				});
 			});
 		});

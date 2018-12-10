@@ -43,7 +43,7 @@ class Product extends Component {
 			date: new Date(Date.now()).toLocaleDateString
 		};
 
-		API.postComment(this.state.product._id, review).then(response => {console.log(response)});
+		API.postComment(this.state.product._id, review);
 	};
 
 	handleRecommendedLink = event => {
