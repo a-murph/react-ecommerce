@@ -143,7 +143,7 @@ class Product extends Component {
 								<span className="product-title-font">{this.state.product.name}</span>
 								<a href="##"><span className="product-bold-font">{this.state.product.brand}</span></a>
 								<div>
-									<img alt="" src="#"/>
+									<img className="product-stars" alt={`${this.state.product.rating} stars`} src={`/img/stars/${this.state.product.rating}-star.svg`}/>
 									<a href="##"><span className="product-body-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span></a>
 								</div>
 							</div>

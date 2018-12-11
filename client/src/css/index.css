@@ -1003,6 +1003,11 @@ a {
   display: flex;
   flex-direction: column;
 }
+.product-main .product-main-info .main-info-title .product-stars {
+  height: 20px;
+  margin-bottom: -5px;
+  margin-right: 10px;
+}
 .product-main .product-main-info .main-info-price {
   display: flex;
   flex-direction: column;
