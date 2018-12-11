@@ -135,7 +135,7 @@ class Product extends Component {
 							{this.state.images.length > 1 ? (
 								<ImgCarousel className="carousel-center" type="image" slideCount={1} items={this.state.images} />
 							) : (
-								<img alt="product image" className="product-main-display-img" src={`/${this.state.product.image}`}/>
+								<img alt="product" className="product-main-display-img" src={`/${this.state.product.image}`}/>
 							)}
 						</div>
 						<div className="product-main-info">
@@ -190,7 +190,7 @@ class Product extends Component {
 							<span className="product-title-font title">About This Item</span>
 							<span className="product-body-font">{this.state.product.description}</span>
 						</div>
-						<img alt="product image 2" className="product-description-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.src=`/${this.state.product.image}`}} />
+						<img alt="product" className="product-description-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.src=`/${this.state.product.image}`}} />
 					</div>
 
 					<div className="recommended-products">
