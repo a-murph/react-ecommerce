@@ -135,7 +135,7 @@ class Product extends Component {
 							{this.state.images.length > 1 ? (
 								<ImgCarousel className="carousel-center" type="image" slideCount={1} items={this.state.images} />
 							) : (
-								<img alt="" className="product-main-display-img" src={`/${this.state.product.image}`}/>
+								<img alt="product image" className="product-main-display-img" src={`/${this.state.product.image}`}/>
 							)}
 						</div>
 						<div className="product-main-info">
@@ -179,8 +179,8 @@ class Product extends Component {
 							</div>
 
 							<div className="main-info-add-to-list">
-									<a href="##"><img alt="" src="#"/><span className="product-bold-font">Add to List</span></a>
-									<a href="##"><img alt="" src="#"/><span className="product-bold-font add-to-registry">Add to Registry</span></a>
+									<a href="##"><span className="product-bold-font">Add to List</span></a>
+									<a href="##"><span className="product-bold-font add-to-registry">Add to Registry</span></a>
 							</div>
 						</div>
 					</div>
@@ -190,7 +190,7 @@ class Product extends Component {
 							<span className="product-title-font title">About This Item</span>
 							<span className="product-body-font">{this.state.product.description}</span>
 						</div>
-						<img alt="" className="product-description-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.src=`/${this.state.product.image}`}} />
+						<img alt="product image 2" className="product-description-img" src={`/${this.state.imageId}.2.jpeg`} onError={(e)=>{e.target.onerror = null; e.target.src=`/${this.state.product.image}`}} />
 					</div>
 
 					<div className="recommended-products">
@@ -204,11 +204,11 @@ class Product extends Component {
 						<div className="customer-reviews-bar">
 							<div className="reviews-summary">
 								<span className="product-title-font">{this.state.product.reviews ? this.state.product.reviews.length : "0"} Customer Reviews</span>
-								<div><img alt="" src="#" className="total-review-stars" /><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
+								<div><span className="product-body-font">{this.state.product.rating} out of 5 stars</span></div>
 								<div className="customer-reviews-breakdown-bars">
 									<a href="##">
 										<div className="star-container">
-											<img alt="" src="/img/stars/5-star.svg" />
+											<img alt="5 stars" src="/img/stars/5-star.svg" />
 										</div>
 										<span className="text-container product-body-font">
 											{(this.state.ratings[5] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
@@ -219,7 +219,7 @@ class Product extends Component {
 									</a>
 									<a href="##">
 										<div className="star-container">
-											<img alt="" src="/img/stars/4-star.svg" />
+											<img alt="4 stars" src="/img/stars/4-star.svg" />
 										</div>
 										<span className="text-container product-body-font">
 											{(this.state.ratings[4] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
@@ -230,7 +230,7 @@ class Product extends Component {
 									</a>
 									<a href="##">
 										<div className="star-container">
-											<img alt="" src="/img/stars/3-star.svg" />
+											<img alt="3 stars" src="/img/stars/3-star.svg" />
 										</div>
 										<span className="text-container product-body-font">
 											{(this.state.ratings[3] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
@@ -241,7 +241,7 @@ class Product extends Component {
 									</a>
 									<a href="##">
 										<div className="star-container">
-											<img alt="" src="/img/stars/2-star.svg" />
+											<img alt="2 stars" src="/img/stars/2-star.svg" />
 										</div>
 										<span className="text-container product-body-font">
 											{(this.state.ratings[2] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%
@@ -252,7 +252,7 @@ class Product extends Component {
 									</a>
 									<a href="##">
 										<div className="star-container">
-											<img alt="" src="/img/stars/1-star.svg" />
+											<img alt="1 star" src="/img/stars/1-star.svg" />
 										</div>
 										<span className="text-container product-body-font">
 											{(this.state.ratings[1] / (this.state.product.reviews ? this.state.product.reviews.length : 1)).toFixed(2) * 100}%

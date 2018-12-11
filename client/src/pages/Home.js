@@ -24,7 +24,7 @@ class Home extends Component {
 				</div>
 
 				<div className="logo-container">
-					<img alt="" className="img" src="img/logo2.svg" />
+					<img alt="West Indigo logo" className="img" src="img/logo2.svg" />
 				</div>
 
 				<nav className="home-menu-bar">
@@ -38,13 +38,13 @@ class Home extends Component {
 					<Dropdown title="Account & Lists" list={["Lorem", "Ipsum", "Dolor", "Sit", "Amet"]} />
 					<Dropdown title="Orders" list={["Lorem", "Ipsum", "Dolor", "Sit", "Amet"]} />
 					<div className="home-nav-cart-button pointer">
-						<img alt="" className="img" src="img/shopping-cart-solid.svg"/>
+						<img alt="Cart" className="img" src="img/shopping-cart-solid.svg"/>
 						<span className="nav-title-font">Cart</span>
 					</div>
 				</nav>
 
 				<div className="jumbotron-carousel">
-					<img alt="" className="img" src="img/index/carousel-stock1.jpg" />
+					<img alt="Feature" className="img" src="img/index/carousel-stock1.jpg" />
 					<a className="plaque-container" href="##">
 						<div className="plaque">
 							<span className="plaque-title-font">5 NAMES TO KNOW</span>
@@ -57,7 +57,7 @@ class Home extends Component {
 
 				<div className="featured-under-jumbotron">
 					<a className="featured-under-jumbotron-item-anchor" href="##"><div className="featured-under-jumbotron-item">
-						<img alt="" className="featured-under-jumbotron-item-img" src="img/index/1.jpg" />
+						<img alt="Abiti" className="featured-under-jumbotron-item-img" src="img/index/1.jpg" />
 						<div className="featured-under-jumbotron-item-text">
 							<span className="underjumbo-title-font">ABITI'S DEBUT</span>
 							<p className="underjumbo-body-font">The iconic Italian streetwear label comes to West Indigo.</p>
@@ -66,7 +66,7 @@ class Home extends Component {
 					</div></a>
 
 					<a className="featured-under-jumbotron-item-anchor" href="##"><div className="featured-under-jumbotron-item">
-						<img alt="" className="featured-under-jumbotron-item-img" src="img/index/3.jpg" />
+						<img alt="Urban Jungle" className="featured-under-jumbotron-item-img" src="img/index/3.jpg" />
 						<div className="featured-under-jumbotron-item-text">
 							<span className="underjumbo-title-font">URBAN JUNGLE</span>
 							<p className="underjumbo-body-font">Green is in for home decor every season.</p>
@@ -79,23 +79,23 @@ class Home extends Component {
 					<span className="discover-title-font">SEE OUR LATEST DEALS IN</span>
 					<div className="more-to-discover-item-container">
 						<Link className="more-to-discover-item" to="/search?s=&c=Clothing&o=low-high">
-							<img alt="" className="more-to-discover-item-img" src="img/index/c.png" />
+							<img alt="Clothing" className="more-to-discover-item-img" src="img/index/c.png" />
 							<span className="more-to-discover-text discover-font">CLOTHING</span>
 						</Link>
 						<Link className="more-to-discover-item" to="/search?s=&c=Electronics&o=low-high">
-							<img alt="" className="more-to-discover-item-img" src="img/index/e.jpg" />
+							<img alt="Electronics" className="more-to-discover-item-img" src="img/index/e.jpg" />
 							<span className="more-to-discover-text discover-font">ELECTRONICS</span>
 						</Link>
 						<Link className="more-to-discover-item" to="/search?s=&c=Health%20and%20Beauty&o=low-high">
-							<img alt="" className="more-to-discover-item-img" src="img/index/a.jpg" />
+							<img alt="Health and Beauty" className="more-to-discover-item-img" src="img/index/a.jpg" />
 							<span className="more-to-discover-text discover-font">HEALTH AND BEAUTY</span>
 						</Link>
 						<Link className="more-to-discover-item" to="/search?s=&c=Home&o=low-high">
-							<img alt="" className="more-to-discover-item-img" src="img/index/b.png" />
+							<img alt="Home Goods" className="more-to-discover-item-img" src="img/index/b.png" />
 							<span className="more-to-discover-text discover-font">HOME</span>
 						</Link>
 						<Link className="more-to-discover-item" to="/search?s=&c=Media&o=low-high">
-							<img alt="" className="more-to-discover-item-img" src="img/index/d.jpg" />
+							<img alt="Media" className="more-to-discover-item-img" src="img/index/d.jpg" />
 							<span className="more-to-discover-text discover-font">MEDIA</span>
 						</Link>
 					</div>
@@ -103,7 +103,7 @@ class Home extends Component {
 
 				<div className="featured-sellers-card-section">
 					<a className="featured-seller-card" href="##">
-						<img alt="" className="featured-seller-card-img" src="img/index/2.jpg" />
+						<img alt="Sneakers" className="featured-seller-card-img" src="img/index/2.jpg" />
 						<div className="featured-seller-card-plaque">
 							<span className="plaque-title-font">NEW SEASON, NEW KICKS</span>
 							<div className="featured-seller-card-divider"></div>
@@ -112,7 +112,7 @@ class Home extends Component {
 						</div>
 					</a>
 					<a className="featured-seller-card" href="##">
-						<img alt="" className="featured-seller-card-img" src="img/index/4.jpg" />
+						<img alt="Cartas Magicas" className="featured-seller-card-img" src="img/index/4.jpg" />
 						<div className="featured-seller-card-plaque">
 							<span className="plaque-title-font">WEST INDIGO and JANE DOE</span>
 							<span className="plaque-body-font">present:</span>
