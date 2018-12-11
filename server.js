@@ -9,10 +9,9 @@ const PORT = process.env.PORT || 3001 || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Serve up static assets
-app.use(express.static("client/public"));
+app.use(express.static("./client/build"));
 // Add routes, both API and view
 app.use(routes);
-//app.use('/auth', require('./auth'));
 
 // If deployed, use the deployed database. Otherwise use the local ecommerce database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ecommerce";
