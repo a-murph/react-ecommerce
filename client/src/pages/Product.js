@@ -173,6 +173,11 @@ class Product extends Component {
 										{this.state.product.color.map((color, index) => <option key={index}>{color}</option>)}
 									</select>
 								) : ""}
+								{this.state.product.format ? (
+									<select>
+										{this.state.product.format.map((format, index) => <option key={index}>{format}</option>)}
+									</select>
+								) : ""}
 							</div>
 
 
