@@ -278,17 +278,29 @@ class Product extends Component {
 								<button onClick={this.toggleModal} className="write-a-review-button" type="button">Write a Review</button>
 							</div>
 
-							<div id="comment-modal" className="hidden">
-								<form onSubmit={this.handleForm}>
-									<input type="number" id="form-rating" placeholder="Stars" min={1} max={5}></input>
-									<input type="text" id="form-title" placeholder="Review Title"></input>
-									<input type="text" id="form-name" placeholder="Username"></input>
-									<textarea id="form-review" placeholder="Review Body"></textarea>
-									<input type="submit" value="Submit Review"></input>
-								</form>
+							<div id="comment-modal" className="modal hidden" onClick={this.toggleModal}>
+								<div className="modal-body" onClick={event => {event.stopPropagation()}}>
+									<h5 className="modal-body-title title-font">Write a Review</h5>
+									<form className="modal-form" onSubmit={this.handleForm}>
+										<div className="modal-form-row">
+											<label className="title-font" for="form-rating">Rating out of 5:</label><input type="number" name="form-rating" id="form-rating" min={1} max={5}></input>
+										</div>
+										<div className="modal-form-row">
+											<label className="title-font" for="form-title">Review Title:</label><input type="text" name="form-title" id="form-title"></input>
+										</div>
+										<div className="modal-form-row">
+											<label className="title-font" for="form-name">Your Name:</label><input type="text" name="form-name" id="form-name"></input>
+										</div>
+										<div className="modal-form-row">
+											<label className="title-font" for="form-review">Review:</label><textarea name="form-review" id="form-review"></textarea>
+										</div>
+										<div className="modal-form-row">
+											<input type="submit" value="Submit Review"></input>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
-
 
 						<div className="reviews-section">
 							{this.state.product.reviews ?

@@ -1249,6 +1249,45 @@ a {
 .reviews-section .review:last-child {
   border-bottom: 1px solid lightgray;
 }
+.modal {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal .modal-body {
+  background-color: #ffffff;
+  width: 45vw;
+  height: 450px;
+  margin-top: 25vh;
+  margin-left: 27.5vw;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid #888;
+  overflow: auto;
+}
+.modal .modal-body .modal-body-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.modal .modal-body .modal-form .modal-form-row {
+  margin-top: 15px;
+}
+.modal .modal-body .modal-form .modal-form-row label {
+  display: block;
+  margin-bottom: 7px;
+}
+.modal .modal-body .modal-form .modal-form-row input {
+  width: 40%;
+}
+.modal .modal-body .modal-form .modal-form-row #form-rating {
+  width: 50px;
+}
+.modal .modal-body .modal-form .modal-form-row textarea {
+  width: 60%;
+  height: 100px;
+}
 .hidden {
   display: none;
 }

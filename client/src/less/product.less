@@ -371,7 +371,57 @@
     }
 }
 
+.modal{
+	position: fixed;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.2);
+
+	.modal-body{
+		background-color: rgb(255, 255, 255);
+		width: 45vw;
+		height: 450px;
+		margin-top: 25vh;
+		margin-left: 27.5vw;
+		box-sizing: border-box;
+		padding: 20px;
+		border: 2px solid #888;
+		overflow: auto;
+
+		.modal-body-title{
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		.modal-form{
+
+			.modal-form-row{
+				margin-top: 15px;
+
+				label{
+					display: block;
+					margin-bottom: 7px;
+				}
+
+				input{
+					width: 40%;
+				}
+
+				#form-rating{
+					width: 50px;
+				}
+
+				textarea{
+					width: 60%;
+					height: 100px;
+				}
+			}
+		}
+	}
+}
+
 //HIDDEN CLASS FOR COMMENT MODAL
-.hidden {
+.hidden{
 	display: none;
 }
