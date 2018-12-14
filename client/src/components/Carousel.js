@@ -4,7 +4,6 @@ import RecommendedItem from "./RecommendedItem";
 
 class ImgCarousel extends Component {
 	render() {
-
 		return (
 			<Carousel wrapAround={true} slidesToShow={this.props.slideCount} heightMode="max">
 				{this.props.type === "image" ? (this.props.items.map((image, index) => {

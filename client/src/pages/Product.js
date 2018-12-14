@@ -95,15 +95,19 @@ class Product extends Component {
 				this.setState({
 					imageId: image[0]
 				}, () => {
-					axios.get(`/${this.state.imageId}.2.jpeg`).then(() => {
-						this.setState({
-							images: [...this.state.images, `/${this.state.imageId}.2.jpeg`]
-						});
+					axios.get(`/${this.state.imageId}.2.jpeg`).then(response => {
+						if (response.headers["content-type"] !== "text/html; charset=UTF-8") {
+							this.setState({
+								images: [...this.state.images, `/${this.state.imageId}.2.jpeg`]
+							});
+						}
 					});
-					axios.get(`/${this.state.imageId}.3.jpeg`).then(() => {
-						this.setState({
-							images: [...this.state.images, `/${this.state.imageId}.3.jpeg`]
-						});
+					axios.get(`/${this.state.imageId}.3.jpeg`).then(response => {
+						if (response.headers["content-type"] !== "text/html; charset=UTF-8") {
+							this.setState({
+								images: [...this.state.images, `/${this.state.imageId}.3.jpeg`]
+							});
+						}
 					});
 				});
 			})
@@ -157,7 +161,6 @@ class Product extends Component {
 										`$${(this.state.product.listprice - this.state.product.price).toFixed(2)} (${((this.state.product.listprice - this.state.product.price)/this.state.product.listprice*100).toFixed(0)}%)`
 									) : ("$0.00 (0%)")}</span></div>
 							</div>
-
 
 							<div className="main-info-sizing-color">
 								{this.state.product.size ? (
