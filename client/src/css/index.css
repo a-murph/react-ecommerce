@@ -948,6 +948,9 @@ a {
 .product-page-top-bar .top-bar-search-result {
   margin-left: 5%;
 }
+.product-page-top-bar .top-bar-search-result a {
+  color: #000;
+}
 .product-page-top-bar .top-bar-social-media-share {
   width: 6%;
   margin-right: 5%;
