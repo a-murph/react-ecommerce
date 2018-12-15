@@ -283,16 +283,16 @@ class Product extends Component {
 									<h5 className="modal-body-title title-font">Write a Review</h5>
 									<form className="modal-form" onSubmit={this.handleForm}>
 										<div className="modal-form-row">
-											<label className="title-font" for="form-rating">Rating out of 5:</label><input type="number" name="form-rating" id="form-rating" min={1} max={5}></input>
+											<label className="title-font" htmlFor="form-rating">Rating out of 5:</label><input type="number" name="form-rating" id="form-rating" min={1} max={5}></input>
 										</div>
 										<div className="modal-form-row">
-											<label className="title-font" for="form-title">Review Title:</label><input type="text" name="form-title" id="form-title"></input>
+											<label className="title-font" htmlFor="form-title">Review Title:</label><input type="text" name="form-title" id="form-title"></input>
 										</div>
 										<div className="modal-form-row">
-											<label className="title-font" for="form-name">Your Name:</label><input type="text" name="form-name" id="form-name"></input>
+											<label className="title-font" htmlFor="form-name">Your Name:</label><input type="text" name="form-name" id="form-name"></input>
 										</div>
 										<div className="modal-form-row">
-											<label className="title-font" for="form-review">Review:</label><textarea name="form-review" id="form-review"></textarea>
+											<label className="title-font" htmlFor="form-review">Review:</label><textarea name="form-review" id="form-review"></textarea>
 										</div>
 										<div className="modal-form-row">
 											<input type="submit" value="Submit Review"></input>
